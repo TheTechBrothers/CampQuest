@@ -48,7 +48,39 @@ User Story: As a user, I want to be able to see the location of the event I’m 
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there. 
 
+***Optional User Stories:***
+ 
+ First Storie
+Title: User creates an account on the website 
 
+User Story: As a new CampQuest user, I want to register by creating a username and password so that the system can remember me and my data as well as grant me access to member-only features such as a favorites list. 
 
+Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the log in page, then I will be able to successfully register myself by signing up with a username and password enabling me to log in with my chosen credentials in the future. 
+
+Second Storie
+ Title: User adds college to favorites list 
+
+User Story: As a registered CampQuest user, I want to have the ability to add certain colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor. 
+
+ Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events. 
+
+Third Storie
+ Title: User purchases event tickets 
+
+User Story: As a user, I want to be able to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchase the tickets on an external site. 
+
+ Acceptance Criteria: Given I am a user (guest or registered), when I click on “buy tickets” for a particular event, then the website will take me through a checkout process where add the quantity of tickets to my cart and purchase the tickets with a debit or credit card.  
+
+***2. Screens ***
+
+Login – Registered users sign into their account. Unregistered users on this page can choose either to create a new account or continue as a guest. 
+
+Sign Up – User registers to become a CampQuest member. 
+
+Search – User (guest or registered) can search for a college or university using the search bar. 
+
+Contact Us – User (guest or registered) can contact the customer support line if they have any problems, questions, or concerns with the website. User can also contact the owners of the website by filling out a form. 
+
+About Us – User (guest or registered) can read about CampQuest’s purpose as well as what you can find as you explore the website. 
 
 
