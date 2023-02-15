@@ -32,11 +32,22 @@ A college campus app that allows users to browse, create and promote local colle
 
 ***Required User Stories:***
 
-1. Title: User picks which U.S. college/university they want to see events for 
+First User Stories
+
+Title: User picks which U.S. college/university they want to see events for 
 
 User Story: As a user, I want to have the ability to search for any college or university in the United States, so I can see what events are happening currently and in the future. 
 
 Acceptance Criteria: Given I am a user (guest or registered), when I type in the name of my desired college/university, then the name of the school will appear, allowing me to click it and view all future events. 
+
+Second User Stories
+
+Title: User gets directions to event location 
+
+User Story: As a user, I want to be able to see the location of the event I’m interested in, so I can know exactly where to be when the event starts. 
+
+Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there. 
+
 
 
 
