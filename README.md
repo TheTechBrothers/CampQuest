@@ -8,13 +8,13 @@
 
 3.Wireframes 
 
-## ***Overview***
+# ***Overview***
 
 ## ***Description***
 A college campus app that allows users to browse, create and promote local college events around the United States. Could be potentially used as meeting new friends in college or making new memories to last a long time.
 
 
-# ***Website evaluation***
+## ***Website evaluation***
 
 1.Category: Entertainment/Lifestyle 
 
@@ -26,3 +26,6 @@ A college campus app that allows users to browse, create and promote local colle
 
 5.Scope: First we find the location of the current user then we locate the different local college events by region or state. Large potential for use with universities in the United States
 
+# ***Product Spec***
+
+***1. User Stories (Required and Optional)***
