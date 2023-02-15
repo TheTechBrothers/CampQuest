@@ -95,7 +95,7 @@ User Story: As a user, I want to be able to purchase event tickets through the w
 Acceptance Criteria: Given I am a user (guest or registered), when I click on “buy tickets” for a particular event, then the website will take me through a checkout process where add the quantity of tickets to my cart and purchase the tickets with a debit or credit card.  
 
 
-***2.Screens:***
+***2. Screens:***
 
 Login – Registered users sign into their account. Unregistered users on this page can choose either to create a new account or continue as a guest. 
 
@@ -108,7 +108,7 @@ Contact Us – User (guest or registered) can contact the customer support line 
 About Us – User (guest or registered) can read about CampQuest’s purpose as well as what you can find as you explore the website. 
 
 
-***3.Navigation:***
+***3. Navigation:***
 
 ***Guest User Tab Navigation:***
 
