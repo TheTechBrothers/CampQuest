@@ -18,13 +18,13 @@ A college campus app that allows users to browse, create and promote local colle
 
 1. Category: Entertainment/Lifestyle 
 
-2. Story: Locates a user location and finds and connects them to different local college events or universities being hosted in the state or regionally. Tickets can be sold for the event on the app. The user can select what event they are interested in and see the different key details for the event. 
+2. Story: Uses the user’s search query to connect them to their desired college/university’s future events. Users can select the event they are interested in and see its vital details, such as time, location, and host. 
 
-3. Market: Any individual could choose to use this app, and to keep it a safe environment. 
+3. Market: Any individual can use this website. 
 
-4. Habit: This app could be used as often or as the user wants to browse, create and promote local college events. 
+4. Habit: Users can use this website as frequently as they want to browse, create and promote local college events. 
 
-5. Scope: First we find the location of the current user then we locate the different local college events by region or state. Large potential for use with universities in the United States
+5. Scope: First, we read the college/university the user types in the search bar, then provide a list of future events for that particular campus. Immense potential for use with universities in the United States.
 
 # ***Product Spec***
 
@@ -35,107 +35,107 @@ A college campus app that allows users to browse, create and promote local colle
 
 ***User Story 1***
 
-Title: User picks which U.S. college/university they want to see events for 
+Title: User picks which U.S. college/university they want to see events for
 
-User Story: As a user, I want to have the ability to search for any college or university in the United States, so I can see what events are happening currently and in the future. 
+User Story: As a user, I want to have the ability to search for any college or university in the United States, so I can see what events are happening currently and in the future.
 
 Acceptance Criteria: Given I am a user (guest or registered), when I type in the name of my desired college/university, then the name of the school will appear, allowing me to click it and view all future events.
 
 ***User Story 2***
 
-Title: User gets directions to event location. 
+Title: User gets directions to the event location.
 
-User Story: As a user, I want to be able to see the location of the event I’m interested in, so I can know exactly where to be when the event starts. 
+User Story: As a user, I want to see the location of the event I’m interested in, so I can know exactly where to be when the event starts.
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there.
 
 ***User Story 3***
 
-Title: User contacts customer support. 
+Title: User contacts customer support.
 
-User Story: As a user, I want to be able to contact the customer support line, so I have any of my questions or concerns about the website answered. 
+User Story: As a user, I want to be able to contact the customer support line so I have any of my questions or concerns about the website answered.
 
-Acceptance Criteria: Given I am a user (guest or registered), when I click on the “Contact Us” page, then CampQuest’s customer support phone number and email address will appear allowing me to get assistance through whichever way I choose. 
+Acceptance Criteria: Given I am a user (guest or registered), when I click on the “Contact Us” page, then CampQuest’s customer support phone number and email address will appear, allowing me to get assistance through whichever way I choose.
 
 
 
 ***Optional User Stories:***
  
  
-***User Story 1***
+**User Story 1**
 
-Title: User logs into the website 
+Title: User logs into the website
 
-User Story: As a registered CampQuest user, I want to log in with my username and password so that the system can authenticate me.
+User Story: As a registered CampQuest user, I want to log in with my username and password so the system can authenticate me.
 
-Acceptance Criteria: Given that I am a logged-out registered user, when I go to the log-in page and log in using my username and password, then my user data should be available. 
+Acceptance Criteria: Given that I am a logged-out registered user, when I go to the login page and log in using my username and password, then my user data should be available. 
 
-***User Story 2***
+**User Story 2**
 
-Title: User creates an account on the website. 
+Title: User creates an account on the website.
 
-User Story: As a new CampQuest user, I want to register by creating a username and password so that the system can remember me and my data as well as grant me access to member-only features such as a favorites list. 
+User Story: As a new CampQuest user, I want to register by creating a username and password so the system can remember me and my data and grant me access to member-only features such as a favorites list.
 
-Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the log in page, then I will be able to successfully register myself by signing up with a username and password enabling me to log in with my chosen credentials in the future.
+Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the login page, then I will be able to successfully register myself by signing up with a username and password, enabling me to log in with my chosen credentials in the future.
 
-***User Story 3***
+**User Story 3**
 
-Title: User adds college to favorites list 
+Title: User adds college to favorites list
 
-User Story: As a registered CampQuest user, I want to have the ability to add certain colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor.
+User Story: As a registered CampQuest user, I want to have the ability to add specific colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor.
 
 Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events.  
 
-***User Story 4***
+**User Story 4**
 
-Title: User purchases event tickets 
+Title: User purchases event tickets
 
-User Story: As a user, I want to be able to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchase the tickets on an external site.
+User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
 
-Acceptance Criteria: Given I am a user (guest or registered), when I click on “buy tickets” for a particular event, then the website will take me through a checkout process where add the quantity of tickets to my cart and purchase the tickets with a debit or credit card.  
+Acceptance Criteria: Given I am a user (guest or registered), when I click on “Buy Tickets” for a particular event, then the website will take me through a checkout process where I add the number of tickets to my cart and purchase the tickets with a debit or credit card. 
 
 
 ***2. Screens:***
 
-Login – Registered users sign into their account. Unregistered users on this page can choose either to create a new account or continue as a guest. 
+Login – Registered users sign into their accounts. Unregistered users on this page can either create a new account or continue as a guest.
 
-Sign Up – User registers to become a CampQuest member. 
+Sign Up – User registers to become a CampQuest member.
 
-Search – User (guest or registered) can search for a college or university using the search bar. 
+Search – Users (guest or registered) can search for a college or university using the search bar.
 
-Contact Us – User (guest or registered) can contact the customer support line if they have any problems, questions, or concerns with the website. User can also contact the owners of the website by filling out a form. 
+Contact Us – Users (guest or registered) can contact the customer support line if they have any problems, questions, or concerns with the website. Users can also contact the website owners by filling out a form.
 
-About Us – User (guest or registered) can read about CampQuest’s purpose as well as what you can find as you explore the website. 
+About Us – Users (guest or registered) can read about CampQuest’s purpose and what you can find as you explore the website. 
 
 
 ***3. Navigation:***
 
 ***Guest User Tab Navigation:***
 
-Sign Up 
+⋅ Sign Up 
 
-Login 
+⋅ Login 
 
-Search 
+⋅ Search 
 
-Contact Us 
+⋅ Contact Us 
 
-About Us 
+⋅ About Us 
 
 
 ***Registered User Tab Navigation:*** 
 
-Search 
+⋅ Search 
 
-Contact Us 
+⋅ Contact Us 
 
-About Us 
+⋅ About Us 
 
-Favorites (Optional) 
+⋅ Favorites (Optional) 
 
 
 
-# ***WireFreame***
+# ***WireFrame***
 
 
 
