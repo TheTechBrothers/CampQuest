@@ -89,6 +89,6 @@ Contact Us – User (guest or registered) can contact the customer support line 
 About Us – User (guest or registered) can read about CampQuest’s purpose as well as what you can find as you explore the website. 
 
 
-***2.Navigation:***
+***3.Navigation:***
 
 
