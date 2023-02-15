@@ -49,6 +49,15 @@ User Story: As a user, I want to be able to see the location of the event I’m 
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there. 
 
+Third Storie
+
+Title: User contacts customer support 
+
+User Story: As a user, I want to be able to contact the customer support line, so I have any of my questions or concerns about the website answered. 
+
+Acceptance Criteria: Given I am a user (guest or registered), when I click on the “Contact Us” page, then CampQuest’s customer support phone number and email address will appear allowing me to get assistance through whichever way I choose. 
+
+
 
 ***Optional User Stories:***
  
@@ -61,6 +70,7 @@ User Story: As a new CampQuest user, I want to register by creating a username a
 Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the log in page, then I will be able to successfully register myself by signing up with a username and password enabling me to log in with my chosen credentials in the future. 
 
 Second Storie
+
  Title: User adds college to favorites list 
 
 User Story: As a registered CampQuest user, I want to have the ability to add certain colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor. 
@@ -90,5 +100,27 @@ About Us – User (guest or registered) can read about CampQuest’s purpose as 
 
 
 ***3.Navigation:***
+
+
+
+
+
+
+
+***Tap Navigation:***
+
+
+
+
+
+
+# ***WireFreame***
+
+
+
+
+
+
+# *** Digital WireFreame***
 
 
