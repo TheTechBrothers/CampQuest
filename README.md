@@ -33,7 +33,7 @@ A college campus app that allows users to browse, create and promote local colle
 ***Required User Stories:***
 
 
-User Story 1
+***User Story 1***
 
 Title: User picks which U.S. college/university they want to see events for 
 
@@ -41,7 +41,7 @@ User Story: As a user, I want to have the ability to search for any college or u
 
 Acceptance Criteria: Given I am a user (guest or registered), when I type in the name of my desired college/university, then the name of the school will appear, allowing me to click it and view all future events.
 
-User Story 2
+***User Story 2***
 
 Title: User gets directions to event location. 
 
@@ -49,7 +49,7 @@ User Story: As a user, I want to be able to see the location of the event I’m 
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there.
 
-User Story 3
+***User Story 3***
 
 Title: User contacts customer support. 
 
@@ -62,7 +62,7 @@ Acceptance Criteria: Given I am a user (guest or registered), when I click on th
 ***Optional User Stories:***
  
  
-User Story 1
+***User Story 1***
 
 Title: User logs into the website 
 
@@ -70,7 +70,7 @@ User Story: As a registered CampQuest user, I want to log in with my username an
 
 Acceptance Criteria: Given that I am a logged-out registered user, when I go to the log-in page and log in using my username and password, then my user data should be available. 
 
-User Story 2
+***User Story 2***
 
 Title: User creates an account on the website. 
 
@@ -78,7 +78,7 @@ User Story: As a new CampQuest user, I want to register by creating a username a
 
 Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the log in page, then I will be able to successfully register myself by signing up with a username and password enabling me to log in with my chosen credentials in the future.
 
-User Story 3
+***User Story 3***
 
 Title: User adds college to favorites list 
 
@@ -86,7 +86,7 @@ User Story: As a registered CampQuest user, I want to have the ability to add ce
 
 Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events.  
 
-User Story 4
+***User Story 4***
 
 Title: User purchases event tickets 
 
@@ -110,7 +110,7 @@ About Us – User (guest or registered) can read about CampQuest’s purpose as 
 
 ***3.Navigation:***
 
-Guest User Tab Navigation:
+***Guest User Tab Navigation:***
 
 Sign Up 
 
@@ -123,7 +123,7 @@ Contact Us
 About Us 
 
 
-Registered User Tab Navigation: 
+***Registered User Tab Navigation:*** 
 
 Search 
 
