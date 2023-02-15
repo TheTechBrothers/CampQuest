@@ -32,6 +32,7 @@ A college campus app that allows users to browse, create and promote local colle
 
 ***Required User Stories:***
 
+
 First User Stories
 
 Title: User picks which U.S. college/university they want to see events for 
@@ -48,7 +49,9 @@ User Story: As a user, I want to be able to see the location of the event I’m 
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there. 
 
+
 ***Optional User Stories:***
+ 
  
  First Storie
 Title: User creates an account on the website 
@@ -72,7 +75,8 @@ User Story: As a user, I want to be able to purchase event tickets through the w
  Acceptance Criteria: Given I am a user (guest or registered), when I click on “buy tickets” for a particular event, then the website will take me through a checkout process where add the quantity of tickets to my cart and purchase the tickets with a debit or credit card.  
 
 
-***Screens:***
+
+***2.Screens:***
 
 Login – Registered users sign into their account. Unregistered users on this page can choose either to create a new account or continue as a guest. 
 
@@ -83,5 +87,8 @@ Search – User (guest or registered) can search for a college or university usi
 Contact Us – User (guest or registered) can contact the customer support line if they have any problems, questions, or concerns with the website. User can also contact the owners of the website by filling out a form. 
 
 About Us – User (guest or registered) can read about CampQuest’s purpose as well as what you can find as you explore the website. 
+
+
+***2.Navigation:***
 
 
