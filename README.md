@@ -11,7 +11,7 @@
 # ***Overview***
 
 ## ***Description***
-A college campus app that allows users to browse, create and promote local college events around the United States. Could be potentially used as meeting new friends in college or making new memories to last a long time.
+CampQuest is a college campus event website that allows users to browse, create and promote local college events around the United States. This website will enable students, alums, and their families to find events easily, have fun with their friends, potentially meet new friends, and make new everlasting memories.
 
 
 ## ***Website Evaluation***
