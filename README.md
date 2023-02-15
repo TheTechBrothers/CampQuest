@@ -33,7 +33,7 @@ A college campus app that allows users to browse, create and promote local colle
 ***Required User Stories:***
 
 
-***User Story 1***
+**User Story 1**
 
 Title: User picks which U.S. college/university they want to see events for
 
@@ -41,7 +41,7 @@ User Story: As a user, I want to have the ability to search for any college or u
 
 Acceptance Criteria: Given I am a user (guest or registered), when I type in the name of my desired college/university, then the name of the school will appear, allowing me to click it and view all future events.
 
-***User Story 2***
+**User Story 2**
 
 Title: User gets directions to the event location.
 
@@ -49,7 +49,7 @@ User Story: As a user, I want to see the location of the event I’m interested 
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on my desired school event, then the event’s location will appear, allowing me to copy the address and successfully navigate there.
 
-***User Story 3***
+**User Story 3**
 
 Title: User contacts customer support.
 
