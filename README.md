@@ -156,7 +156,13 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ***Model***
 
+***Model One: Search***
+
 | Property | Type | Description |
 | --- | --- | --- |
 | CollegeName | String | Name of college/university |
+| State | String | Name of State |
+| ZipCode | Integer | Zip Code |
+| County | String | Name of County |
+
 
