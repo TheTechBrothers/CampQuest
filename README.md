@@ -152,5 +152,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 ![IMG_2824](https://user-images.githubusercontent.com/115364128/218961822-ef2506de-3b93-43d7-83cf-65512ffd98f6.png)
 ![CampQuest (2)-min](https://user-images.githubusercontent.com/115364128/218962593-2dd62e68-7fbc-45fe-93c7-3804651bb81a.png)
 
+## ***Schema***
+
 
 
