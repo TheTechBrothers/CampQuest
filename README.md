@@ -154,7 +154,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ## ***Schema***
 
-***Model***
+### ***Model***
 
 ***Model 1: Search***
 
@@ -183,3 +183,17 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | City  | String | User’s city  |
 | CreatedAt  | Timestamp | Time of account creation  |
 | LastLogin   | Timestamp | Time that user last logged in |
+
+
+### ***Networking***
+
+### ***List of network requests by tabs***
+
+| Search Screen |
+| --- |
+| Read/GET | Query all college universities names |
+| Read/GET | Query all college universities names | 
+| Read/GET | Query the state the college/university is in |
+| Read/GET | Query the zip code the college/university is in | 
+|Read/GET | Query the county the college/university is in | 
+
