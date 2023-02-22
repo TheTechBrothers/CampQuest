@@ -158,4 +158,5 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 | Property | Type | Description |
 | --- | --- | --- |
+| CollegeName | String | Name of college/university |
 
