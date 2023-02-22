@@ -189,11 +189,29 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ### ***List of network requests by tabs***
 
-| Search Screen | Description |
+| Search Tab | Description |
 | --- | --- |
 | Read/GET | Query all college universities names |
 | Read/GET | Query all college universities names | 
 | Read/GET | Query the state the college/university is in |
 | Read/GET | Query the zip code the college/university is in | 
 |Read/GET | Query the county the college/university is in | 
+
+| Sign Up Tab | Description |
+| --- | --- |
+| Create/POST | Create a new account |
+
+| Account Tab | Description |
+| --- | --- |
+| Read/GET | Query logged in user object |
+| Update/PUT | Update user profile image  | 
+| Update/PUT |  Update user email|
+| Delete | Delete existing account | 
+
+| Event Tab | Description |
+| --- | --- |
+| Read/GET | Query in events name |
+| Read/GET | Query logged in events address |
+| Read/GET | Query logged in university name | 
+|Read/GET | Query logged in event’s date | 
 
