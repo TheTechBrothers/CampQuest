@@ -189,8 +189,8 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ### ***List of network requests by tabs***
 
-| Search Screen |
-| --- |
+| Search Screen | Description |
+| --- | --- |
 | Read/GET | Query all college universities names |
 | Read/GET | Query all college universities names | 
 | Read/GET | Query the state the college/university is in |
