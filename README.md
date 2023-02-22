@@ -156,7 +156,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ***Model***
 
-***Model One: Search***
+***Model 1: Search***
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -165,4 +165,21 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | ZipCode | Integer | Zip Code |
 | County | String | Name of County |
 
+***Model 2: Event***
+| Property | Type | Description |
+| --- | --- | --- |
+| EventName | String | Name of Event |
+| EventAddress | String | Location of Event |
+| UniversityName | String | Name of College/University |
+| EventDate | Timestamp | Event's Date |
 
+***Model 3: User***
+| Property | Type | Description |
+| --- | --- | --- |
+| FirstName | String | User’s first name  |
+| LastName | String | User’s last name  |
+| UniversityName | String | Name of College/University |
+| Email  | String | User’s email  |
+| City  | String | User’s city  |
+| CreatedAt  | Timestamp | Time of account creation  |
+| LastLogin   | Timestamp | Time that user last logged in |
