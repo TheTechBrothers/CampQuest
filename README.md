@@ -154,5 +154,8 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ## ***Schema***
 
+*** Model ***
 
+|Property|Type|Description|
+----------------------------
 
