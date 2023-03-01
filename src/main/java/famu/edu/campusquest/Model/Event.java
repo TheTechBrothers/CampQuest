@@ -24,9 +24,5 @@ public class Event {
     private String EventAddress;
     private String UniversityName;
     private Timestamp EventDate;
-
-    public void setEventDate(String eventDate) throws ParseException {
-        this.EventDate = Timestamp.fromProto(Timestamps.parse(eventDate));
-    }
 }
 
