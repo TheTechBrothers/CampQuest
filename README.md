@@ -220,9 +220,10 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 2.Event Model
 
-GIF Upates of Projects
 
-## ***Milestone 3 Gif***
+## ***GIF Upates of Projects Gif***
+
+1.Milestone 3
 
 ![Milestone 3](https://user-images.githubusercontent.com/110430142/222097169-29107fd5-9822-4344-93dc-7234a3181ac5.gif)
 
