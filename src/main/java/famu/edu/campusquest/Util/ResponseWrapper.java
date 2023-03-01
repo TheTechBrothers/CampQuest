@@ -1,8 +1,9 @@
+package famu.edu.campusquest.Util;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
 
-import java.util.Collection;
 import java.util.Collections;
 
 @Data
@@ -11,7 +12,6 @@ public class ResponseWrapper {
 
     private int statusCode;
     private String name;
-
     private Object payload;
 
     public ResponseEntity getResponse()

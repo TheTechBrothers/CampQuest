@@ -17,6 +17,7 @@ import java.text.ParseException;
 public class User {
     @DocumentId
     private @Nullable String id;
+    private @Nullable String uid;
     private String FirstName;
     private String LastName;
     private String City;
@@ -24,12 +25,5 @@ public class User {
     private String UniversityName;
     private Timestamp LastLogin;
     private Timestamp CreatedAt;
-
-    public void setLastLogin(String lastLogin) throws ParseException {
-        this.LastLogin = Timestamp.fromProto(Timestamps.parse(lastLogin));
-    }
-    public void setCreatedAt(String createdAt) throws ParseException {
-        this.CreatedAt = Timestamp.fromProto(Timestamps.parse(createdAt));
-    }
 }
 
