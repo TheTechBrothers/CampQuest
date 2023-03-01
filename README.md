@@ -224,7 +224,7 @@ GIF Upates of Projects
 
 ## ***Milestone 3 Gif***
 
-![Milestone 2](https://user-images.githubusercontent.com/110430142/222092895-8f1fd7f5-e692-4c54-9ad1-1c0e98650df0.gif)
+![Milestone 3](https://user-images.githubusercontent.com/110430142/222097169-29107fd5-9822-4344-93dc-7234a3181ac5.gif)
 
 
 
