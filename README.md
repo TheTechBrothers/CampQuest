@@ -215,3 +215,11 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | Read/GET | Query logged in university name | 
 |Read/GET | Query logged in event’s date | 
 
+## ***Models Done***
+1.User Model
+2.Event Model
+
+GIF Upates of Projects
+
+
+
