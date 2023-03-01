@@ -217,9 +217,13 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ## ***Models Done***
 1.User Model
+
 2.Event Model
 
 GIF Upates of Projects
+Milestone 3 Gif
+
+![Milestone 2](https://user-images.githubusercontent.com/110430142/222092895-8f1fd7f5-e692-4c54-9ad1-1c0e98650df0.gif)
 
 
 
