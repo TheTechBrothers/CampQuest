@@ -18,4 +18,3 @@ public class Search {
     private int ZipCode;
     private String County;
 }
-

@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.Nullable;
 
 import java.text.ParseException;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -20,6 +23,10 @@ public class Event {
     private String EventName;
     private String EventAddress;
     private String UniversityName;
-    private String EventDate;
+    private Timestamp EventDate;
+
+    public void setEventDate(String eventDate) throws ParseException {
+        this.EventDate = Timestamp.fromProto(Timestamps.parse(eventDate));
+    }
 }
 
