@@ -218,6 +218,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 ## ***IF EXISTS*** EXISTING API ENDPOINTS
 
 1. EVENT API ENDPOINTS
+
 | HTTP Verb | Endpoint | Description |
 | --- | --- | --- |
 | Read/GET |   | Query in events name |
@@ -229,6 +230,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | Read/GET |   | Query in events name |
 
 2. USER API ENDPOINTS
+
 | HTTP Verb | Endpoint | Description |
 | --- | --- | --- |
 | Read/GET |    | Query in events name |
