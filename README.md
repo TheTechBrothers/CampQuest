@@ -158,62 +158,64 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ***Model 1: Search***
 
-| Property | Type | Description |
-| --- | --- | --- |
-| CollegeName | String | Name of college/university |
-| State | String | Name of State |
-| ZipCode | Integer | Zip Code |
-| County | String | Name of County |
+| Property    | Type    | Description                |
+|-------------|---------|----------------------------|
+| CollegeName | String  | Name of college/university |
+| State       | String  | Name of State              |
+| ZipCode     | Integer | Zip Code                   |
+| County      | String  | Name of County             |
 
 ***Model 2: Event***
-| Property | Type | Description |
-| --- | --- | --- |
-| EventName | String | Name of Event |
-| EventAddress | String | Location of Event |
-| UniversityName | String | Name of College/University |
-| EventDate | Timestamp | Event's Date |
+
+| Property       | Type      | Description                |
+|----------------|-----------|----------------------------|
+| EventName      | String    | Name of Event              |
+| EventAddress   | String    | Location of Event          |
+| UniversityName | String    | Name of College/University |
+| EventDate      | Timestamp | Event's Date               |
 
 ***Model 3: User***
-| Property | Type | Description |
-| --- | --- | --- |
-| FirstName | String | User’s first name  |
-| LastName | String | User’s last name  |
-| UniversityName | String | Name of College/University |
-| Email  | String | User’s email  |
-| City  | String | User’s city  |
-| CreatedAt  | Timestamp | Time of account creation  |
-| LastLogin   | Timestamp | Time that user last logged in |
+
+| Property       | Type      | Description                   |
+|----------------|-----------|-------------------------------|
+| FirstName      | String    | User’s first name             |
+| LastName       | String    | User’s last name              |
+| UniversityName | String    | Name of College/University    |
+| Email          | String    | User’s email                  |
+| City           | String    | User’s city                   |
+| CreatedAt      | Timestamp | Time of account creation      |
+| LastLogin      | Timestamp | Time that user last logged in |
 
 
 ### ***Networking***
 
 ### ***List of network requests by tabs***
 
-| Search Tab | Description |
-| --- | --- |
-| Read/GET | Query all college universities names |
-| Read/GET | Query all college universities names | 
-| Read/GET | Query the state the college/university is in |
-| Read/GET | Query the zip code the college/university is in | 
-|Read/GET | Query the county the college/university is in | 
+| Search Tab | Description                                     |
+|------------|-------------------------------------------------|
+| Read/GET   | Query all college universities names            |
+| Read/GET   | Query all college universities names            | 
+| Read/GET   | Query the state the college/university is in    |
+| Read/GET   | Query the zip code the college/university is in | 
+| Read/GET   | Query the county the college/university is in   | 
 
-| Sign Up Tab | Description |
-| --- | --- |
+| Sign Up Tab | Description          |
+|-------------|----------------------|
 | Create/POST | Create a new account |
 
-| Account Tab | Description |
-| --- | --- |
-| Read/GET | Query logged in user object |
-| Update/PUT | Update user profile image  | 
-| Update/PUT |  Update user email|
-| Delete | Delete existing account | 
+| Account Tab | Description                 |
+|-------------|-----------------------------|
+| Read/GET    | Query logged in user object |
+| Update/PUT  | Update user profile image   | 
+| Update/PUT  | Update user email           |
+| Delete      | Delete existing account     | 
 
-| Event Tab | Description |
-| --- | --- |
-| Read/GET | Query in events name |
-| Read/GET | Query logged in events address |
-| Read/GET | Query logged in university name | 
-|Read/GET | Query logged in event’s date | 
+| Event Tab | Description                     |
+|-----------|---------------------------------|
+| Read/GET  | Query in events name            |
+| Read/GET  | Query logged in events address  |
+| Read/GET  | Query logged in university name | 
+| Read/GET  | Query logged in event’s date    | 
 
 ## ***IF EXISTS*** EXISTING API ENDPOINTS
 
