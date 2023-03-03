@@ -219,27 +219,27 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 1. EVENT API ENDPOINTS
 
-| HTTP Verb | Endpoint | Description |
-| --- | --- | --- |
-| Read/GET |   | Query in events name |
-| Read/GET |   | Query in events name |
-| Read/GET |   | Query in events name |
-| Read/GET |   | Query in events name |
-| Read/GET |   | Query in events name |
-| Read/GET |   | Query in events name |
-| Read/GET |   | Query in events name |
+* Base URL: http://localhost:8080/api
+
+| HTTP Verb | Endpoint         | Description                                 |
+|-----------|------------------|---------------------------------------------|
+| GET       | /event           | Retrieves all events                        |
+| GET       | /event/{eventId} | Retrieves a specific event based on it's ID |
+| POST      | /event           | Creates a new event                         |
+| PUT       | /event/{eventId} | Updates an event based on it's ID           |
+| DELETE    | /event/{eventId} | Deletes an event based on it's ID           |
 
 2. USER API ENDPOINTS
 
-| HTTP Verb | Endpoint | Description |
-| --- | --- | --- |
-| Read/GET |    | Query in events name |
-| Read/GET |    | Query in events name |
-| Read/GET |    | Query in events name |
-| Read/GET |    | Query in events name |
-| Read/GET |    | Query in events name |
-| Read/GET |    | Query in events name |
-| Read/GET |    | Query in events name |
+* Base URL: http://localhost:8080/api
+
+| HTTP Verb | Endpoint       | Description                                |
+|-----------|----------------|--------------------------------------------|
+| GET       | /user          | Retrieves all users                        |
+| GET       | /user/{userId} | Retrieves a specific user based on it's ID |
+| POST      | /user          | Creates a new user                         |
+| PUT       | /user/{userId} | Updates a user based on it's ID            |
+| DELETE    | /user/{userId} | Deletes a user based on it's ID            |
 
 ## ***Models Done***
 1.User Model
