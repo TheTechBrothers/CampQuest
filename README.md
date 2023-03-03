@@ -215,6 +215,30 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | Read/GET | Query logged in university name | 
 |Read/GET | Query logged in event’s date | 
 
+## ***IF EXISTS*** EXISTING API ENDPOINTS
+
+1. EVENT API ENDPOINTS
+| HTTP Verb | Endpoint | Description |
+| --- | --- | --- |
+| Read/GET |   | Query in events name |
+| Read/GET |   | Query in events name |
+| Read/GET |   | Query in events name |
+| Read/GET |   | Query in events name |
+| Read/GET |   | Query in events name |
+| Read/GET |   | Query in events name |
+| Read/GET |   | Query in events name |
+
+2. USER API ENDPOINTS
+| HTTP Verb | Endpoint | Description |
+| --- | --- | --- |
+| Read/GET |    | Query in events name |
+| Read/GET |    | Query in events name |
+| Read/GET |    | Query in events name |
+| Read/GET |    | Query in events name |
+| Read/GET |    | Query in events name |
+| Read/GET |    | Query in events name |
+| Read/GET |    | Query in events name |
+
 ## ***Models Done***
 1.User Model
 
