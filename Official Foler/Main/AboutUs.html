@@ -8,8 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
+    body, header,nav,main,footer,img {
+      margin:0;
+      padding: 0;
+      border: 0;
     }
 
     p{
@@ -19,7 +21,7 @@
 
     b{
       font-family: 'Roboto', sans-serif;
-      font-size: 1.15em;
+      font-size: 1.05em;
     }
     /* Styles Rules for Navigation Area */
     nav{
@@ -55,8 +57,11 @@
       transform: scale(1.2);
     }
     img{
-      /*max-width: 20.2%;*/
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
       display: block;
+      border-radius: 10px;
     }
 
     header{
@@ -64,14 +69,23 @@
       float: left;
     }
 
-    figcaption{
-      font-family: 'Lobster Two', cursive;
-      font-size: 1.15em;
-    }
-    /* Classes */
     .story{
       background-color: #DEF2F1;
     }
+
+    *{
+      box-sizing: border-box;
+    }
+    .column{
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+.row{
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
   </style>
@@ -93,8 +107,7 @@
 </nav>
 
 <main>
-
-<div style="text-align: center;">
+<center>
 
 
 
@@ -111,19 +124,28 @@
     Terrelle Thomas and Elijah Hodges</b>
  <p></p>
   <b><p>Are you a college student? Are you tired of having a boring college experience? Then you have the right website to make your experience less boring.CampQuest is a college campus event website that allows users to browse, create and promote local college events around the United States. This website will enable students, alums, and their families to find events easily, have fun with their friends, potentially meet new friends, and make new everlasting memories.As you go through this website, you will find different sports, school-related, and affiliated events posted with their vital details, such as time, location, and host.</p></b>
+    <section class="row">
+      <section class="column">
+        <img src="College%20Dinner.jpg" alt="Dinner">
+      </section>
+      <section class="column">
+        <img src="Concert.jpg" alt="Enjoying">
+      </section>
+    </section>
   </div>
 
 
 
+
+  <br></br>
+  <br></br>
 
  <!--Use div in order to control the color for each section -->
 
 
 
 <br></br>
-  <br></br>
-  <br></br>
-  <br></br>
+
 
 
   <b><p>Mission Statement:To help and improve college students social experience
@@ -134,7 +156,12 @@
     Mission Vision: The vision of CampQuest is to be one of the most trustworthy site where we can enhance all college students social
     experience in college
   </b>
-  <img src="Concert.jpg" alt="Life" width="300" height="200">
+  <center>
+    <video width="400" height="300" controls>
+      <source src="CampQuest.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </center>
 
   <br></br>
   <br></br>
@@ -154,12 +181,11 @@
 
 
 
-</div>
-
+</center>
 </main>
 
 <footer>
-  <center>@ Copyright 2022, All Rights Reserved</center>
+  <b><center>@ Copyright 2023, All Rights Reserved</center></b>
 </footer>
 
 </body>

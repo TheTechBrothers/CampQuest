@@ -9,6 +9,7 @@ import famu.edu.campusquest.Util.ResponseWrapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -64,7 +65,7 @@ public class EventController {
             payload = eventService.createEvent(event);
             statusCode = 201;
             name = "eventId";
-        } catch (ExecutionException | InterruptedException e) {
+        } catch (ExecutionException | InterruptedException | ParseException e) {
             payload = new ErrorMessage("Cannot create new event in database.", CLASS_NAME, e.toString());
         }
 

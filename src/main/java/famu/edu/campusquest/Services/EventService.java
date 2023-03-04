@@ -7,6 +7,7 @@ import com.google.firebase.cloud.FirestoreClient;
 import famu.edu.campusquest.Model.Event;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
 import java.util.*;
 import java.util.concurrent.ExecutionException;
 
@@ -39,7 +40,7 @@ public class EventService {
         return event;
     }
 
-    public String createEvent(Event event) throws ExecutionException, InterruptedException {
+    public String createEvent(Event event) throws ExecutionException, InterruptedException, ParseException {
         String eventId = null;
         event.setEventDate(Timestamp.now());
 

@@ -9,9 +9,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.Nullable;
 
 import java.text.ParseException;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -21,8 +18,7 @@ public class Event {
     @DocumentId
     private @Nullable String id;
     private String EventName;
-    private String EventAddress;
-    private String UniversityName;
     private Timestamp EventDate;
+
 }
 
