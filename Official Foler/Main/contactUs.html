@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Introduction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bd1fef33ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        body{
+            background-image: url("Customer.jpg");
+        }
+        * {box-sizing: border-box;}
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4484CE;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        label{
+            color: #4484CE;
+            font-size: 17px;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        h4, h5{
+            font-size: 1.20em;
+        }
+        p{
+            font-size: 1.20em;
+        }
+
+    </style>
+</head>
+<body>
+
+<center><h1>Contact Us</h1>
+    <p></p>
+    <p></p>
+<h4>Need Help?</h4>
+<h4>Contact customer support through email or telephone!</h4>
+    <h5>Phone: 1-888-789-6642</h5>
+    <h5>Email: customersupport@campquest.com</h5>
+</center>
+<br></br>
+
+<b><center><p>If you would like to contact Tech Brothers directly, please fill out the form below.</p></center></b>
+<div class="container">
+    <form action="/action_page.php" method="get">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Number">
+
+        <label for="subject1">Subject Topic</label>
+        <input type="text" id="subject1" name="phone" placeholder="Subject Topic">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
