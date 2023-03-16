@@ -14,16 +14,14 @@ import java.io.IOException;
 public class CampusQuestApplication {
 
 	public static void main(String[] args) throws IOException {
-
-		//This line may be different based on what your project is named. Use the appropriate class name appears above
 		ClassLoader loader = CampusQuestApplication.class.getClassLoader();
 
-//opens the file stored in resources
-		File file = new File(loader.getResource("serviceAccountKey.json").getFile());
-//reads the data from the file
+		//opens the file stored in resources
+		File file = new File(loader.getResource("serviceAccount.json").getFile());
+
 		FileInputStream serviceAccount = new FileInputStream(file.getAbsolutePath());
 
-//connect to Firebase
+		//connect to Firebase
 		FirebaseOptions options = new FirebaseOptions.Builder()
 				.setCredentials(GoogleCredentials.fromStream(serviceAccount))
 				.build();
@@ -31,7 +29,6 @@ public class CampusQuestApplication {
 		FirebaseApp.initializeApp(options);
 
 		SpringApplication.run(CampusQuestApplication.class, args);
-
 	}
 
 }

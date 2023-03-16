@@ -20,7 +20,7 @@ public class User {
     private String City;
     private String Email;
     private String UniversityName;
-    private Timestamp LastLogin;
-    private Timestamp CreatedAt;
+    private @Nullable Timestamp LastLogin;
+    private @Nullable Timestamp CreatedAt;
 }
 
