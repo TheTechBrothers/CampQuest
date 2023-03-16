@@ -1,10 +1,8 @@
 package famu.edu.campusquest.Controller;
 
 import com.google.api.client.util.Value;
-import famu.edu.campusquest.Model.Event;
 import famu.edu.campusquest.Model.RestEvent;
 import famu.edu.campusquest.Services.EventService;
-import famu.edu.campusquest.Services.UserService;
 import famu.edu.campusquest.Util.ErrorMessage;
 import famu.edu.campusquest.Util.ResponseWrapper;
 import org.springframework.http.ResponseEntity;
