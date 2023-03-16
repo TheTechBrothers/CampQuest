@@ -250,7 +250,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 3.College Model
 
-### ***User Stories Completed***
+## ***User Stories Completed***
 
 1.
 
