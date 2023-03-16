@@ -243,10 +243,15 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | PUT       | /user/{userId} | Updates a user based on it's ID            |
 | DELETE    | /user/{userId} | Deletes a user based on it's ID            |
 
-## ***Models Done***
+## ***Models/Controller/Services Done***
 1.User Model
 
 2.Event Model
+
+3.College Model
+
+### ***User Stories Completed***
+
 
 
 ## ***GIF Upates of Projects Gif***
