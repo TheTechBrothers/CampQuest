@@ -4,7 +4,10 @@ import com.google.api.core.ApiFuture;
 import com.google.cloud.Timestamp;
 import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
+import com.google.protobuf.util.Timestamps;
+import famu.edu.campusquest.Model.College;
 import famu.edu.campusquest.Model.Event;
+import famu.edu.campusquest.Model.RestEvent;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
@@ -15,52 +18,82 @@ import java.util.concurrent.ExecutionException;
 public class EventService {
     private Firestore db = FirestoreClient.getFirestore();
 
-    public ArrayList<Event>getEvents() throws ExecutionException, InterruptedException {
-        Query query = db.collection("Event");
-        ApiFuture<QuerySnapshot> future = query.get();
-        List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+    public Event getEvent(DocumentSnapshot doc) throws ExecutionException, InterruptedException {
 
-        ArrayList<Event> events = (documents.size() > 0) ? new ArrayList<>() : null;
+        College collegeName = new College();
+
+        ArrayList<College> collegeNames = new ArrayList<>();
+        ArrayList<DocumentReference> refs = (ArrayList<DocumentReference>) doc.get("collegeName");
+        for (DocumentReference ref : refs) {
+            ApiFuture<DocumentSnapshot> catQuery = ref.get();
+            DocumentSnapshot catDoc = catQuery.get();
+            collegeName = catDoc.toObject(College.class);
+            collegeNames.add(collegeName);
+        }
+        //logger.info(categories);
+
+        return new Event(doc.getId(), doc.getString("EventName"), doc.getTimestamp("EventDate"), collegeNames);
+
+    }
+
+    public ArrayList<Event> getEvents() throws ExecutionException, InterruptedException {
+
+        Query query = db.collection("Event")
+                .orderBy("title", Query.Direction.ASCENDING);
+
+        ApiFuture<QuerySnapshot> future = query.get();
+        List<QueryDocumentSnapshot> documents =
+                future.get().getDocuments();
+
+        ArrayList<Event> events = (documents.size() > 0) ?
+                new ArrayList<>() : null;
 
         for (QueryDocumentSnapshot doc : documents)
-            events.add(doc.toObject(Event.class));
+            events.add(getEvent(doc));
 
         return events;
-
-
     }
 
     public Event getEventById(String id) throws ExecutionException, InterruptedException {
-        Event event = null;
+        DocumentSnapshot event = null;
 
         DocumentReference doc = db.collection("Event").document(id);
         ApiFuture<DocumentSnapshot> future = doc.get();
-        event = future.get().toObject(Event.class);
+        event = future.get();
 
-        return event;
+        return getEvent(event);
     }
 
-    public String createEvent(Event event) throws ExecutionException, InterruptedException, ParseException {
+    public String createEvent(RestEvent event) throws ExecutionException, InterruptedException {
         String eventId = null;
-        event.setEventDate(Timestamp.now());
 
         ApiFuture<DocumentReference> future = db.collection("Event").add(event);
-        DocumentReference eventRef = future.get();
-        eventId = eventRef.getId();
+        DocumentReference roomRef = future.get();
+        eventId = roomRef.getId();
 
         return eventId;
     }
 
-    public void updateEvent(String id, Map<String, String> updateValues){
+    public void updateEvent(String id, Map<String, String> updateValues) throws ParseException {
 
-        String [] allowed = {"EventAddress", "EventDate", "EventName"};
+        String[] allowed = {"EventAddress", "EventDate", "EventName"};
         List<String> list = Arrays.asList(allowed);
         Map<String, Object> formattedValues = new HashMap<>();
 
-        for(Map.Entry<String, String> entry : updateValues.entrySet()) {
+        for (Map.Entry<String, String> entry : updateValues.entrySet()) {
             String key = entry.getKey();
-            if(list.contains(key))
-                formattedValues.put(key, entry.getValue());
+            if (list.contains(key)) {
+                switch (key) {
+                    case "EventDate":
+                        formattedValues.put(key, Timestamp.fromProto(Timestamps.parse((String) entry.getValue())));
+                        break;
+                    default:
+                        formattedValues.put(key, entry.getValue());
+                        break;
+                }
+
+
+            }
         }
 
         DocumentReference eventDoc = db.collection("Event").document(id);
