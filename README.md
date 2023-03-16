@@ -261,3 +261,9 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ![Milestone 4](https://user-images.githubusercontent.com/110430142/223641300-93e72ab6-5c14-42c7-a6d2-b036a37f25ab.gif)
 
+
+3.Milestone 5
+
+![Milestone 6](https://user-images.githubusercontent.com/110430142/225540066-c0431ee7-6138-4f6a-bbc2-89c2de6ef7d1.gif)
+
+
