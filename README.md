@@ -252,8 +252,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ### ***User Stories Completed***
 
-
-
+1.
 
 
 ## ***GIF Upates of Projects Gif***
