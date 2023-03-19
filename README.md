@@ -243,10 +243,16 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | PUT       | /user/{userId} | Updates a user based on it's ID            |
 | DELETE    | /user/{userId} | Deletes a user based on it's ID            |
 
-## ***Models Done***
+## ***Models/Controller/Services Done***
 1.User Model
 
 2.Event Model
+
+3.College Model
+
+## ***User Stories Completed***
+
+1.
 
 
 ## ***GIF Upates of Projects Gif***
@@ -260,4 +266,10 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 2. Milestone 4
 
 ![Milestone 4](https://user-images.githubusercontent.com/110430142/223641300-93e72ab6-5c14-42c7-a6d2-b036a37f25ab.gif)
+
+
+3.Milestone 5
+
+![Milestone 6](https://user-images.githubusercontent.com/110430142/225540066-c0431ee7-6138-4f6a-bbc2-89c2de6ef7d1.gif)
+
 
