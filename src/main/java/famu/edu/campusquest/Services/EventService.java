@@ -25,7 +25,7 @@ public class EventService {
         DocumentSnapshot collegeDoc = collegeQuery.get();
         collegeName = collegeDoc.toObject(College.class);
 
-        //return collegeName;
+        return new Event(doc.getId(), doc.getString("EventName"), doc.getTimestamp("EventDate"), collegeNames);
     }
 
     public ArrayList<Event> getEvents() throws ExecutionException, InterruptedException {
