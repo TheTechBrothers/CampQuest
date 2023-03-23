@@ -22,6 +22,7 @@ h2, h3{
 label{
     color: #4484CE;
     font-size: 17px;
+    text-align: left;
 }
 #Uname{
     width: 300px;

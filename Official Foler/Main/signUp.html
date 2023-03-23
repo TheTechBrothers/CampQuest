@@ -74,19 +74,23 @@
         body{
             background-image: url("Background.jpg");
         }
+        label{
+            text-align: left;
+        }
     </style>
 </head>
 <body>
 <center><h1>CampQuest</h1></center>
+<center>
 <div class="signin">
-    <form id="signin" method="get" action="signin.php">
+    <form>
        <b><p>Already have an account?</b> <a href="#"> Login Here</a>
         <br></br>
         <label><b>Full Name</b></label>
-        <input type="text" name="Uname" id="Uname" placeholder="FullName">
+        <input type="text" name="Uname" id="Uname" placeholder="Personal Name">
         <br></br>
         <label><b>School Name</b></label>
-        <input type="text" name="School" id="School" placeholder="SchoolName">
+        <input type="text" name="School" id="School" placeholder="School Name">
         <br></br>
         <label><b>Email Address
         </b>
@@ -103,7 +107,9 @@
     <center><input type="button" name="sign" id="sign" value="Sign In"></center>
     </form>
 </div>
+</center>
 
+<br></br>
 <footer>
     <b><center>@ Copyright 2023, All Rights Reserved</center></b>
 </footer>
