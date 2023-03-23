@@ -18,22 +18,14 @@ import java.util.concurrent.ExecutionException;
 public class EventService {
     private Firestore db = FirestoreClient.getFirestore();
 
-    public Event getEvent(DocumentSnapshot doc) throws ExecutionException, InterruptedException {
-
+    /*public Event getEvent(DocumentSnapshot collegeRef) throws ExecutionException, InterruptedException {
         College collegeName = new College();
 
-        ArrayList<College> collegeNames = new ArrayList<>();
-        ArrayList<DocumentReference> refs = (ArrayList<DocumentReference>) doc.get("collegeName");
-        for (DocumentReference ref : refs) {
-            ApiFuture<DocumentSnapshot> catQuery = ref.get();
-            DocumentSnapshot catDoc = catQuery.get();
-            collegeName = catDoc.toObject(College.class);
-            collegeNames.add(collegeName);
-        }
-        //logger.info(categories);
+        ApiFuture<DocumentSnapshot> collegeQuery = collegeRef.get();
+        DocumentSnapshot collegeDoc = collegeQuery.get();
+        collegeName = collegeDoc.toObject(College.class);
 
-        return new Event(doc.getId(), doc.getString("EventName"), doc.getString("EventAddress"), doc.getTimestamp("EventDate"), collegeNames);
-
+        //return collegeName;
     }
 
     public ArrayList<Event> getEvents() throws ExecutionException, InterruptedException {
@@ -62,7 +54,7 @@ public class EventService {
         event = future.get();
 
         return getEvent(event);
-    }
+    }*/
 
     public String createEvent(RestEvent event) throws ExecutionException, InterruptedException {
         String eventId = null;

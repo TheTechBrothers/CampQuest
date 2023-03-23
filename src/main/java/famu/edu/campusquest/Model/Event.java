@@ -14,11 +14,11 @@ import java.util.ArrayList;
 
 public class Event extends BaseEvent {
 
-    private ArrayList<College> CollegeName;
+    private College collegeId;
 
-    public Event(@Nullable String id, String EventName, String EventAddress, @Nullable Timestamp EventDate, ArrayList<College> collegeName) {
+    public Event(@Nullable String id, String EventName, String EventAddress, @Nullable Timestamp EventDate, College collegeId) {
         super(id, EventName, EventAddress, EventDate);
-        CollegeName = collegeName;
+        this.collegeId = collegeId;
     }
 }
 

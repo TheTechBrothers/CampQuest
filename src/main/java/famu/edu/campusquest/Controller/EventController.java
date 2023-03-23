@@ -29,7 +29,7 @@ public class EventController {
         payload = null;
     }
 
-    @GetMapping("/")
+    /*@GetMapping("/")
     public ResponseEntity<Map<String,Object>> getEvents(){
         Map<String,Object> returnVal = new HashMap<>();
         int statusCode = 500;
@@ -58,7 +58,7 @@ public class EventController {
 
         response = new ResponseWrapper(statusCode, name, payload);
         return response.getResponse();
-    }
+    }*/
 
     @PostMapping("/")
     public ResponseEntity<Map<String,Object>> createEvent(@RequestBody RestEvent event){

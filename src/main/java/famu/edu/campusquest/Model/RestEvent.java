@@ -13,19 +13,15 @@ import java.util.ArrayList;
 @Data
 @NoArgsConstructor
 public class RestEvent extends BaseEvent {
-    private ArrayList<DocumentReference> collegeName;
+    private DocumentReference collegeId;
 
-    public RestEvent(@Nullable String id, String EventName, String EventAddress, @Nullable Timestamp EventDate, ArrayList<DocumentReference> collegeName) {
+    public RestEvent(@Nullable String id, String EventName, String EventAddress, @Nullable Timestamp EventDate, DocumentReference collegeId) {
         super(id, EventName, EventAddress, EventDate);
-        this.collegeName = collegeName;
+        this.collegeId = collegeId;
     }
 
-    public void setCollegeName(ArrayList<String> collegeName) {
+    public void setCollegeId(String college) {
         Firestore db = FirestoreClient.getFirestore();
-        this.collegeName = new ArrayList<>();
-        for(String cat: collegeName){
-            this.collegeName.add(db.collection("College").document(cat));
-        }
-
+        this.collegeId = db.collection("College").document(college);
     }
 }
