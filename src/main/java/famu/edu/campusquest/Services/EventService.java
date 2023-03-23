@@ -32,7 +32,7 @@ public class EventService {
         }
         //logger.info(categories);
 
-        return new Event(doc.getId(), doc.getString("EventName"), doc.getTimestamp("EventDate"), collegeNames);
+        return new Event(doc.getId(), doc.getString("EventName"), doc.getString("EventAddress"), doc.getTimestamp("EventDate"), collegeNames);
 
     }
 
