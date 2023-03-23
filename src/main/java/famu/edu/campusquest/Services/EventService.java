@@ -76,7 +76,7 @@ public class EventService {
 
     public void updateEvent(String id, Map<String, String> updateValues) throws ParseException {
 
-        String[] allowed = {"eventAddress", "eventDate", "eventName"};
+        String[] allowed = {"collegeName", "eventAddress", "eventDate", "eventName"};
         List<String> list = Arrays.asList(allowed);
         Map<String, Object> formattedValues = new HashMap<>();
 
