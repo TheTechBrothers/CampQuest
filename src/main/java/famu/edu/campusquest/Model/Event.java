@@ -16,8 +16,8 @@ public class Event extends BaseEvent {
 
     private ArrayList<College> CollegeName;
 
-    public Event(@Nullable String id, String EventName, @Nullable Timestamp EventDate, ArrayList<College> collegeName) {
-        super(id, EventName, EventDate);
+    public Event(@Nullable String id, String EventName, String EventAddress, @Nullable Timestamp EventDate, ArrayList<College> collegeName) {
+        super(id, EventName, EventAddress, EventDate);
         CollegeName = collegeName;
     }
 }

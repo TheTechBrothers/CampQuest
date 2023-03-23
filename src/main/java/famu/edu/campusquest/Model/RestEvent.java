@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public class RestEvent extends BaseEvent {
     private ArrayList<DocumentReference> collegeName;
 
-    public RestEvent(@Nullable String id, String EventName, @Nullable Timestamp EventDate, ArrayList<DocumentReference> collegeName) {
-        super(id, EventName, EventDate);
+    public RestEvent(@Nullable String id, String EventName, String EventAddress, @Nullable Timestamp EventDate, ArrayList<DocumentReference> collegeName) {
+        super(id, EventName, EventAddress, EventDate);
         this.collegeName = collegeName;
     }
 

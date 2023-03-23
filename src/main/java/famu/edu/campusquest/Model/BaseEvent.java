@@ -18,6 +18,7 @@ public abstract class BaseEvent{
 
     protected @Nullable String id;
     protected String EventName;
+    protected String EventAddress;
     protected @Nullable Timestamp EventDate;
 
     public void  setEventDate(String EventDate) throws ParseException {
