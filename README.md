@@ -30,7 +30,7 @@ CampQuest is a college campus event website that allows users to browse, create 
 
 ***1. User Stories (Required and Optional)***
 
-***Required User Stories:***
+***Optional User Stories:***
 
 
 **User Story 1**
@@ -57,9 +57,24 @@ User Story: As a user, I want to be able to contact the customer support line so
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on the “Contact Us” page, then CampQuest’s customer support phone number and email address will appear, allowing me to get assistance through whichever way I choose.
 
+**User Story 4**
+
+Title: User adds college to favorites list
+
+User Story: As a registered CampQuest user, I want to have the ability to add specific colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor.
+
+Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events.  
+
+**User Story 5**
+
+Title: User purchases event tickets
+
+User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
+
+Acceptance Criteria: Given I am a user (guest or registered), when I click on “Buy Tickets” for a particular event, then the website will take me through a checkout process where I add the number of tickets to my cart and purchase the tickets with a debit or credit card. 
 
 
-***Optional User Stories:***
+***Required User Stories:***
  
  
 **User Story 1**
@@ -77,22 +92,6 @@ Title: User creates an account on the website.
 User Story: As a new CampQuest user, I want to register by creating a username and password so the system can remember me and my data and grant me access to member-only features such as a favorites list.
 
 Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the login page, then I will be able to successfully register myself by signing up with a username and password, enabling me to log in with my chosen credentials in the future.
-
-**User Story 3**
-
-Title: User adds college to favorites list
-
-User Story: As a registered CampQuest user, I want to have the ability to add specific colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor.
-
-Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events.  
-
-**User Story 4**
-
-Title: User purchases event tickets
-
-User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
-
-Acceptance Criteria: Given I am a user (guest or registered), when I click on “Buy Tickets” for a particular event, then the website will take me through a checkout process where I add the number of tickets to my cart and purchase the tickets with a debit or credit card. 
 
 
 ***2. Screens:***
@@ -252,7 +251,21 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 ## ***User Stories Completed***
 
+Required Stories
+
 1.
+
+2.
+
+3.
+
+Optional Stories
+
+1.
+
+2.
+
+3.
 
 
 ## ***GIF Upates of Projects Gif***
