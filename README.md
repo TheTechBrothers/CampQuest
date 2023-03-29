@@ -248,7 +248,7 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 2.Event Model, Event Controller, User Controller
 
-3.College Model
+3. College Model
 
 ## ***User Stories Completed***
 
