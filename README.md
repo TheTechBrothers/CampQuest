@@ -244,9 +244,9 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | DELETE    | /user/{userId} | Deletes a user based on it's ID            |
 
 ## ***Models/Controller/Services Done***
-1.User Model
+1.User Model, User Controller, User Service
 
-2.Event Model
+2.Event Model, Event Controller, User Controller
 
 3.College Model
 
@@ -262,11 +262,11 @@ Required Stories
 
 Optional Stories
 
-1.
+1. User Story: As a user, I want to see the location of the event I’m interested in, so I can know exactly where to be when the event starts.
 
-2.
+2. User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
 
-3.
+3. User Story: As a user, I want to be able to contact the customer support line so I have any of my questions or concerns about the website answered.
 
 
 ## ***GIF Upates of Projects Gif***
