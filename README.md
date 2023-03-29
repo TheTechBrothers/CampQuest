@@ -30,8 +30,7 @@ CampQuest is a college campus event website that allows users to browse, create 
 
 ***1. User Stories (Required and Optional)***
 
-***Optional User Stories:***
-
+## ***Optional User Stories:***
 
 **User Story 1**
 
@@ -74,7 +73,7 @@ User Story: As a user, I want to purchase event tickets through the website, so 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on “Buy Tickets” for a particular event, then the website will take me through a checkout process where I add the number of tickets to my cart and purchase the tickets with a debit or credit card. 
 
 
-***Required User Stories:***
+## ***Required User Stories:***
  
  
 **User Story 1**
@@ -92,6 +91,8 @@ Title: User creates an account on the website.
 User Story: As a new CampQuest user, I want to register by creating a username and password so the system can remember me and my data and grant me access to member-only features such as a favorites list.
 
 Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the login page, then I will be able to successfully register myself by signing up with a username and password, enabling me to log in with my chosen credentials in the future.
+
+## ***     ***
 
 
 ***2. Screens:***
