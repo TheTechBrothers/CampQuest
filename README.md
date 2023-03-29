@@ -287,3 +287,9 @@ Optional Stories
 ![Milestone 6](https://user-images.githubusercontent.com/110430142/225540066-c0431ee7-6138-4f6a-bbc2-89c2de6ef7d1.gif)
 
 
+4. Milestone 6
+
+![Milestone 7](https://user-images.githubusercontent.com/110430142/228693485-73f29aba-e3d3-494b-b5f3-be3e2a51be8e.gif)
+
+
+
