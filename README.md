@@ -30,8 +30,7 @@ CampQuest is a college campus event website that allows users to browse, create 
 
 ***1. User Stories (Required and Optional)***
 
-***Required User Stories:***
-
+## ***Optional User Stories:***
 
 **User Story 1**
 
@@ -57,9 +56,24 @@ User Story: As a user, I want to be able to contact the customer support line so
 
 Acceptance Criteria: Given I am a user (guest or registered), when I click on the “Contact Us” page, then CampQuest’s customer support phone number and email address will appear, allowing me to get assistance through whichever way I choose.
 
+**User Story 4**
+
+Title: User adds college to favorites list
+
+User Story: As a registered CampQuest user, I want to have the ability to add specific colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor.
+
+Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events.  
+
+**User Story 5**
+
+Title: User purchases event tickets
+
+User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
+
+Acceptance Criteria: Given I am a user (guest or registered), when I click on “Buy Tickets” for a particular event, then the website will take me through a checkout process where I add the number of tickets to my cart and purchase the tickets with a debit or credit card. 
 
 
-***Optional User Stories:***
+## ***Required User Stories:***
  
  
 **User Story 1**
@@ -78,21 +92,7 @@ User Story: As a new CampQuest user, I want to register by creating a username a
 
 Acceptance Criteria: Given that I am a new user, when I press on either the sign-up tab or the “Create account” button on the login page, then I will be able to successfully register myself by signing up with a username and password, enabling me to log in with my chosen credentials in the future.
 
-**User Story 3**
-
-Title: User adds college to favorites list
-
-User Story: As a registered CampQuest user, I want to have the ability to add specific colleges or universities to my favorites list, so I can quickly see the events from the campuses I favor.
-
-Acceptance Criteria: Given I am a registered CampQuest user, when I press on my favorites list, then I will be presented with the list of colleges/universities I favorited and the ability to click on each one to see each campus’s events.  
-
-**User Story 4**
-
-Title: User purchases event tickets
-
-User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
-
-Acceptance Criteria: Given I am a user (guest or registered), when I click on “Buy Tickets” for a particular event, then the website will take me through a checkout process where I add the number of tickets to my cart and purchase the tickets with a debit or credit card. 
+## ***     ***
 
 
 ***2. Screens:***
@@ -244,15 +244,29 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 | DELETE    | /user/{userId} | Deletes a user based on it's ID            |
 
 ## ***Models/Controller/Services Done***
-1.User Model
+1.User Model, User Controller, User Service
 
-2.Event Model
+2.Event Model, Event Controller, User Controller
 
 3.College Model
 
 ## ***User Stories Completed***
 
+Required Stories
+
 1.
+
+2.
+
+3.
+
+Optional Stories
+
+1. User Story: As a user, I want to see the location of the event I’m interested in, so I can know exactly where to be when the event starts.
+
+2. User Story: As a user, I want to purchase event tickets through the website, so I can find and buy on CampQuest alone rather than finding on CampQuest and purchasing the tickets on an external site.
+
+3. User Story: As a user, I want to be able to contact the customer support line so I have any of my questions or concerns about the website answered.
 
 
 ## ***GIF Upates of Projects Gif***
@@ -271,5 +285,11 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 3.Milestone 5
 
 ![Milestone 6](https://user-images.githubusercontent.com/110430142/225540066-c0431ee7-6138-4f6a-bbc2-89c2de6ef7d1.gif)
+
+
+4. Milestone 6
+
+![Milestone 7](https://user-images.githubusercontent.com/110430142/228693485-73f29aba-e3d3-494b-b5f3-be3e2a51be8e.gif)
+
 
 
