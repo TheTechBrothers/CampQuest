@@ -42,6 +42,7 @@ public class UserService {
     public String createUser(User user) throws ExecutionException, InterruptedException {
         String userId = null;
         user.setCreatedAt(Timestamp.now());
+        user.setLastLogin(Timestamp.now());
 
         ApiFuture<DocumentReference> future = db.collection("User").add(user);
         DocumentReference userRef = future.get();
