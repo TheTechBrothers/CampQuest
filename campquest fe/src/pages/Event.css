@@ -1,0 +1,24 @@
+ul li a{
+    color: black !important;
+}
+
+p{
+    font-weight: bold;
+}
+
+.nav-item{
+    color: black;
+}
+.nav-item:hover{
+    background-color: #50C878;
+}
+
+a href:active{
+    text-decoration: none;
+    color: black;
+}
+
+a href{
+    text-decoration: none;
+    color: black;
+}
