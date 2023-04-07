@@ -296,6 +296,10 @@ Optional Stories
 
 ![Last Gif](https://user-images.githubusercontent.com/110430142/230242543-0cc90b61-b95d-4be4-9ce0-d709d191763b.gif)
 
+6. Milestone 8
+
+![Next Gif](https://user-images.githubusercontent.com/110430142/230549845-96e534ad-d139-437e-8c7d-a8cb35d5b85b.gif)
+
 
 
 
