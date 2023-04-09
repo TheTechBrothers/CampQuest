@@ -89,7 +89,7 @@ public final class FirebaseAuthenticationConfig extends WebSecurityConfigurerAda
         SessionManagementConfigurer<HttpSecurity> httpSecuritySessionManagementConfigurer = http.cors().configurationSource(corsConfigurationSource()).and().csrf().disable().formLogin().disable()
                 .httpBasic().disable().exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint())
                 .and().authorizeRequests()
-                .dispatcherTypeMatchers((DispatcherType) restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
+                .dispatcherTypeMatchers(new DispatcherType[]{(DispatcherType) restSecProps.getAllowedPublicApis().toArray(String[]::new)}).permitAll()
                 .dispatcherTypeMatchers(HttpMethod.OPTIONS, DispatcherType.valueOf("/**")).permitAll().and()//.anyRequest().authenticated().and()
                 .addFilterBefore(new FirebaseAuthenticationFilter(authenticationManagerBean(), new FirebaseAuthenticationFailureHandler()), UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
