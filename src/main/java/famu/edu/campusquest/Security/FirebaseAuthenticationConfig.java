@@ -87,8 +87,8 @@ public abstract class FirebaseAuthenticationConfig extends WebSecurityConfigurer
         http.cors().configurationSource(corsConfigurationSource()).and().csrf().disable().formLogin().disable()
                 .httpBasic().disable().exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint())
                 .and().authorizeRequests()
-                .antMatchers(restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
-                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll().and()//.anyRequest().authenticated().and()
+                .requestMatchers(restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
+                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll().and()//.anyRequest().authenticated().and()
                 .addFilterBefore(new FirebaseAuthenticationFilter(authenticationManagerBean(),new FirebaseAuthenticationFailureHandler()), UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
     }
