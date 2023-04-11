@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "./fragements";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AboutUs from './pages/AboutUs';
 import Contact from "./pages/Contact";
@@ -8,12 +7,13 @@ import Signin from "./pages/Signin";
 import Event from "./pages/Event";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Menu from "./fragements/Menu";
 
 
 function App() {
   return (
     <Router>
-      <NavBar />
+        <Menu />
       <Routes>
         <Route path='/' exact element={<Signin />} />
         <Route path='/Login' element={<Login/>} />

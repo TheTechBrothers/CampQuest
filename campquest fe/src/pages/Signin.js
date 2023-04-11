@@ -2,6 +2,7 @@ import React, {useContext, useRef, useState} from "react";
 import "/Signin.css";
 import {Link, useNavigate} from "react-router-dom"
 
+
 function SignUp() {
     const context = useContext(AuthContext);
     const emailRef = useRef("");
@@ -10,8 +11,6 @@ function SignUp() {
     let navigate = useNavigate();
 
 }
-
-
 
 
 const Sign = () => {
