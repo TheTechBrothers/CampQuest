@@ -15,7 +15,7 @@ import java.util.concurrent.ExecutionException;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
     @Value("${response.status}")
     private int statusCode;
     @Value("${response.name}")

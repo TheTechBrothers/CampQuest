@@ -25,7 +25,7 @@ const Event = () => {
                     </div>
                     <div className="col-sm-12 col-md-6">
                         <p>DATE: Friday 25th April, 2023</p>
-                        <p>General Admission: $20</p>
+                        <p>General $20</p>
                         <p>Free For Students With School ID</p>
                         <p>Address: 403 Stadium Dr, Tallahassee, Fl 32304</p>
                         <a href="https://seminoles.evenue.net/cgi-bin/ncommerce3/SEGetGroupList?groupCode=FOOTBALL&linkID=fsuse&shopperContext=&caller=&appCode=">
@@ -67,7 +67,7 @@ const Event = () => {
                     </div>
                     <div className="col-sm-12 col-md-6">
                         <p>DATE: Friday 25th May, 2024</p>
-                        <p>General Admission: $15</p>
+                        <p>General $15</p>
                         <p>Free For Students With School ID</p>
                         <p>Address: 120 W Jefferson Blvd, Fort Wayne, IN 46802</p>
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

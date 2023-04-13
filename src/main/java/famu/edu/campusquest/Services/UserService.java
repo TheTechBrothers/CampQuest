@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
 
 @Service
 public class UserService {
-    private Firestore db = FirestoreClient.getFirestore();
+    private final Firestore db = FirestoreClient.getFirestore();
 
     public ArrayList<User>getUsers() throws ExecutionException, InterruptedException {
         Query query = db.collection("User");

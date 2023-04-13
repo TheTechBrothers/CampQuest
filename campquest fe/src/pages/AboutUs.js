@@ -49,13 +49,13 @@ const AboutUs = () => {
             </center>
             <b>
                 <p>
-                    Mission Statement:To help and improve college students social experience
+                    Mission To help and improve college students social experience
                     by locating different local college events.
                 </p>
             </b>
             <p />
             <b>
-                Mission Vision: The vision of CampQuest is to be one of the most trustworthy
+                Mission The vision of CampQuest is to be one of the most trustworthy
                 site where we can enhance all college students social experience in college
             </b>
             <center>
@@ -78,7 +78,7 @@ const AboutUs = () => {
             <br />
             <br />
         </>
-    );
+    )
 };
 
 export  default AboutUs;

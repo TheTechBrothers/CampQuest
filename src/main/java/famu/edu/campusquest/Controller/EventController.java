@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 @RestController
 @RequestMapping("/api/event")
 public class EventController {
-    private EventService eventService;
+    private final EventService eventService;
     @Value("${response.status}")
     private int statusCode;
     @Value("${response.name}")

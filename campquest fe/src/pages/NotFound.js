@@ -13,7 +13,7 @@ function NotFound() {
                 <Link to="/" className="btn btn-primary">Go Home</Link>
             </div>
         </div>
-    );
+    )
 }
 
 export default NotFound;

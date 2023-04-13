@@ -7,24 +7,26 @@ import Signin from "./pages/Signin";
 import Event from "./pages/Event";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
-import Menu from "./fragements/Menu";
+import Footer from "./fragements/Footer";
+import Navbar from "./fragements/NavBar";
 
 
 function App() {
   return (
     <Router>
-        <Menu />
+        <Navbar />
       <Routes>
         <Route path='/' exact element={<Signin />} />
         <Route path='/Login' element={<Login/>} />
         <Route path='/Search' element={<Search/>} />
-        <Route path='/Event' element={<Event/>} />
+        <Route path='/api/event' element={<Event/>} />
         <Route path='/Contact' element={<Contact/>} />
         <Route path='/AboutUs' element={<AboutUs/>} />
           <Route element={<NotFound/>} path="*" />
       </Routes>
+        <Footer />
     </Router>
-  );
+  )
 }
 
 export default App;

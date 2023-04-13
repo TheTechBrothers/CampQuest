@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 
 @Service
 public class EventService {
-    private Firestore db = FirestoreClient.getFirestore();
+    private final Firestore db = FirestoreClient.getFirestore();
 
     /*public Event getEvent(DocumentSnapshot collegeRef) throws ExecutionException, InterruptedException {
         College collegeName = new College();
@@ -75,13 +75,10 @@ public class EventService {
         for (Map.Entry<String, String> entry : updateValues.entrySet()) {
             String key = entry.getKey();
             if (list.contains(key)) {
-                switch (key) {
-                    case "EventDate":
-                        formattedValues.put(key, Timestamp.fromProto(Timestamps.parse((String) entry.getValue())));
-                        break;
-                    default:
-                        formattedValues.put(key, entry.getValue());
-                        break;
+                if (key.equals("EventDate")) {
+                    formattedValues.put(key, Timestamp.fromProto(Timestamps.parse(entry.getValue())));
+                } else {
+                    formattedValues.put(key, entry.getValue());
                 }
 
 
