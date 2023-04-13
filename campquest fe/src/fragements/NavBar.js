@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar "./fragements/NavBar.css";
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light btn-secondary">
