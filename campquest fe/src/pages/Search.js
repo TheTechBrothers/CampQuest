@@ -1,11 +1,17 @@
 import React from "react";
 import "/Search.css";
+import {useNavigate} from "react-router-dom";
 
-function  search () {
+export default function  search () {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const navigate = useNavigate();
 
-}
+    function handclick(event){
+        //this will navigate to the events page when the user puts the information in
+        navigate('/target-route');
 
-const Search = () => {
+    }
+
     return (
         <center>
             <form role="search-role" id="form">
@@ -16,7 +22,7 @@ const Search = () => {
                     placeholder="Event Search"
                     aria-label="Search through content of the site"
                 />
-                <button>
+                <button type="button" onSubmit={handclick}>
                     <svg viewBox="0 0 1024 1024">
                         <path
                             classname="path1"
@@ -27,5 +33,6 @@ const Search = () => {
             </form>
         </center>
     )
+
 }
 
