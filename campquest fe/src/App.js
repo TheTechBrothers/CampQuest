@@ -9,11 +9,13 @@ import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Footer from "./fragements/Footer";
 import Navbar from "./fragements/NavBar";
+import {AuthProvider} from "./AuthContext";
 
 
 function App() {
   return (
     <Router>
+        <AuthProvider>
         <Navbar />
       <Routes>
         <Route path='/' exact element={<Signin />} />
@@ -25,8 +27,9 @@ function App() {
           <Route element={<NotFound/>} path="*" />
       </Routes>
         <Footer />
+        </AuthProvider>
     </Router>
-  )
+  );
 }
 
 export default App;
