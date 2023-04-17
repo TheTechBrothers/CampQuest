@@ -1,6 +1,7 @@
 
 import React from "react";
 import "./AboutUs.css"
+import App from "../App.js"
 
 const AboutUs = () => {
     return (

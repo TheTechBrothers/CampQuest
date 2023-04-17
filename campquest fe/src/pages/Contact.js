@@ -1,5 +1,6 @@
 import React from "react";
-import "./Contact.css"
+import "./Contact.css";
+import App from "../App.js";
 
 function Contact () {
     return (
