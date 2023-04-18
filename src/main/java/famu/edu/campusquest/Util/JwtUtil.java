@@ -6,9 +6,9 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.security.Key;
+import java.sql.Date;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 
 public class JwtUtil {
     private static final Key key = Keys.secretKeyFor(io.jsonwebtoken.SignatureAlgorithm.HS256);
@@ -25,11 +25,11 @@ public class JwtUtil {
                 .compact();
     }
 
-    public static Claims getClaimsFromToken(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(key)
+    public static Claims getClaimsFromToken(String key) {
+        return Jwts.builder()
+                .setIssuer(key)
                 .build()
-                .parseClaimsJws(token)
+                .parseClaimsJws(key)
                 .getBody();
     }
 }
