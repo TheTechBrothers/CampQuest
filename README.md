@@ -254,11 +254,10 @@ About Us – Users (guest or registered) can read about CampQuest’s purpose an
 
 Required Stories
 
-1.
+1.As a registered CampQuest user, I want to log in with my username and password so the system can authenticate me.
 
-2.
+2. As a new CampQuest user, I want to register by creating a username and password so the system can remember me and my data and grant me access to member-only features such as a favorites list.
 
-3.
 
 Optional Stories
 
@@ -299,6 +298,12 @@ Optional Stories
 6. Milestone 8
 
 ![Next Gif](https://user-images.githubusercontent.com/110430142/230549845-96e534ad-d139-437e-8c7d-a8cb35d5b85b.gif)
+
+
+7. Milestone 9
+
+![Milestone 9](https://user-images.githubusercontent.com/110430142/233160568-d84e4cee-fff1-4576-b7e1-a6bb5711d402.gif)
+
 
 
 
