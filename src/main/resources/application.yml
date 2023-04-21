@@ -48,3 +48,5 @@ security:
       /{eventId}
   exposed-headers:
     - X-Xsrf-Token
+    - X-Auth-Token
+    - Expires

@@ -1,9 +1,6 @@
-import React, {useContext, useRef, useState} from "react";
+import React, {useState} from "react";
 import "/Signin.css";
-import {Link, useNavigate} from "react-router-dom"
-import {AuthContext} from "../AuthContext";
-import App from "../App.js"
-
+import {useNavigate} from "react-router-dom"
 
 
 function Sign (){

@@ -80,4 +80,8 @@ public class FirebaseAuthenticationFilter extends OncePerRequestFilter {
     public void setAuthenticationFailureHandler(FirebaseAuthenticationFailureHandler failureHandler) {
         this.failureHandler = failureHandler;
     }
+
+    private String extractAuthorizationTokenFromRequest(HttpServletRequest request) {
+        return request.getHeader("X-Auth-Token");
+    }
 }

@@ -14,7 +14,7 @@ import java.util.concurrent.ExecutionException;
 public class UserService {
     private final Firestore db = FirestoreClient.getFirestore();
 
-    public ArrayList<User>getUsers() throws ExecutionException, InterruptedException {
+    public ArrayList<User> getUsers() throws ExecutionException, InterruptedException {
         Query query = db.collection("User");
         ApiFuture<QuerySnapshot> future = query.get();
         List<QueryDocumentSnapshot> documents = future.get().getDocuments();
@@ -51,15 +51,15 @@ public class UserService {
         return userId;
     }
 
-    public void updateUser(String id, Map<String, String> updateValues){
+    public void updateUser(String id, Map<String, String> updateValues) {
 
-        String [] allowed = {"uid", "city", "createdAt", "email", "firstName", "lastName", "universityName"};
+        String[] allowed = {"uid", "city", "createdAt", "email", "firstName", "lastName", "universityName"};
         List<String> list = Arrays.asList(allowed);
         Map<String, Object> formattedValues = new HashMap<>();
 
-        for(Map.Entry<String, String> entry : updateValues.entrySet()) {
+        for (Map.Entry<String, String> entry : updateValues.entrySet()) {
             String key = entry.getKey();
-            if(list.contains(key))
+            if (list.contains(key))
                 formattedValues.put(key, entry.getValue());
         }
 
@@ -67,9 +67,29 @@ public class UserService {
         userDoc.update(formattedValues);
     }
 
-    public void deleteUser(String userId){
+    public void deleteUser(String userId) {
         DocumentReference userDoc = db.collection("User").document(userId);
         userDoc.delete();
     }
 
+    public User getUserByUid(String uid) throws ExecutionException, InterruptedException {
+        User user = null;
+
+        Query query = db.collection("User")
+                .whereEqualTo("uid", uid);
+        ApiFuture<QuerySnapshot> future = query.get();
+        List<QueryDocumentSnapshot> docs = future.get().getDocuments();
+
+        if (docs.size() == 1)
+            user = docs.get(0).toObject(User.class);
+
+        return user;
+    }
+
+    public void updateLastLogin(String id) {
+        DocumentReference docRef = db.collection("User").document(id);
+        ApiFuture<WriteResult> writeResult = docRef.update("lastLogin", FieldValue.serverTimestamp());
+
+
+    }
 }
