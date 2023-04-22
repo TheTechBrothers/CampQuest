@@ -1,6 +1,6 @@
 import React from "react";
-import "/Event.css";
-import App from "../App.js"
+import "./Event.css";
+
 
 const Event = () => {
     return (
