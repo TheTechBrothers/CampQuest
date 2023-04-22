@@ -60,12 +60,15 @@ public class EventService {
 
     private Event getEvent(DocumentSnapshot doc) throws ExecutionException, InterruptedException {
 
+        String collegeNameStr = doc.getString("collegeName");
         College collegeName = null;
 
-        ApiFuture<DocumentSnapshot> collegeQuery = doc.getReference().collection("College").document(doc.getString("collegeName")).get();
-        DocumentSnapshot collegeDoc = collegeQuery.get();
-        if (collegeDoc.exists()) {
-            collegeName = collegeDoc.toObject(College.class);
+        if (collegeNameStr != null && !collegeNameStr.isEmpty()) {
+            ApiFuture<DocumentSnapshot> collegeQuery = doc.getReference().collection("College").document(collegeNameStr).get();
+            DocumentSnapshot collegeDoc = collegeQuery.get();
+            if (collegeDoc.exists()) {
+                collegeName = collegeDoc.toObject(College.class);
+            }
         }
 
         return new Event(doc.getId(), doc.getString("eventName"), doc.getString("eventAddress"), doc.getTimestamp("eventDate"), collegeName);
