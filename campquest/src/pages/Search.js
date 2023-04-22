@@ -1,5 +1,5 @@
 import React from "react";
-import "/Search.css";
+import "./Search.css";
 import {useNavigate} from "react-router-dom";
 
 export default function  search () {
