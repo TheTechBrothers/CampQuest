@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Controller;
+package famu.edu.campusquest.Controller;
 
 import com.google.api.client.util.Value;
 import com.google.firebase.auth.FirebaseAuth;
@@ -102,4 +102,4 @@ public class AuthenticationController {
         SecurityContextHolder.getContext().setAuthentication(null);
         return "Logged out successfully";
     }
-}*/
+}

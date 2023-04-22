@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Util;
+package famu.edu.campusquest.Util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -33,4 +33,4 @@ public class JwtUtil {
                 .parseClaimsJws(token)
                 .getBody();
     }
-}*/
+}

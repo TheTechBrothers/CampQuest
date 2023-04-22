@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Security;
+package famu.edu.campusquest.Security;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -16,4 +16,4 @@ public class SecurityProperties {
     List<String> exposedHeaders;
     List<String> allowedMethods;
     List<String> allowedPublicApis;
-}*/
+}

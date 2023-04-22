@@ -1,9 +1,8 @@
-/*package famu.edu.campusquest.Security;
+package famu.edu.campusquest.Security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.firebase.auth.FirebaseAuth;
 import famu.edu.campusquest.Services.FirebaseUserDetailsService;
-import jakarta.servlet.DispatcherType;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -109,4 +107,4 @@ public abstract class FirebaseAuthenticationConfig extends WebSecurityConfigurer
     public FirebaseAuthenticationProvider authenticationProvider() {
         return new FirebaseAuthenticationProvider(firebaseAuth);
     }
-}*/
+}

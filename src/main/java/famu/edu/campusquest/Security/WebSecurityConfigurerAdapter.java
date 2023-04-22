@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Security;
+package famu.edu.campusquest.Security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,4 +18,4 @@ public abstract class WebSecurityConfigurerAdapter {
 
     @Bean
     public abstract UserDetailsService userDetailsService();
-}*/
+}

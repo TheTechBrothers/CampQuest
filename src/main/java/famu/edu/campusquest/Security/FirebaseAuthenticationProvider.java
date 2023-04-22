@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Security;
+package famu.edu.campusquest.Security;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
@@ -42,4 +42,4 @@ public class FirebaseAuthenticationProvider implements AuthenticationProvider {
     public boolean supports(Class<?> authentication) {
         return FirebaseAuthenticationToken.class.isAssignableFrom(authentication);
     }
-}*/
+}

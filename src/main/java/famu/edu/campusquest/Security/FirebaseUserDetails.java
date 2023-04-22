@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Security;
+package famu.edu.campusquest.Security;
 
 import com.google.firebase.auth.UserRecord;
 import org.springframework.security.core.GrantedAuthority;
@@ -53,4 +53,4 @@ public class FirebaseUserDetails implements UserDetails {
     public boolean isEnabled() {
         return userRecord.isDisabled();
     }
-}*/
+}

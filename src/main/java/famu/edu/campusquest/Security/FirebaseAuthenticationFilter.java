@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Security;
+package famu.edu.campusquest.Security;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
@@ -84,4 +84,4 @@ public class FirebaseAuthenticationFilter extends OncePerRequestFilter {
     private String extractAuthorizationTokenFromRequest(HttpServletRequest request) {
         return request.getHeader("X-Auth-Token");
     }
-}*/
+}

@@ -1,4 +1,4 @@
-/*package famu.edu.campusquest.Util;
+package famu.edu.campusquest.Util;
 
 import lombok.Data;
 
@@ -6,4 +6,4 @@ import lombok.Data;
 public class LoginRequest {
     private String email;
     private String password;
-}*/
+}
