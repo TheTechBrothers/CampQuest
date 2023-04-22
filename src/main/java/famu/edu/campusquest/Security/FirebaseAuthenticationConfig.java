@@ -1,4 +1,4 @@
-package famu.edu.campusquest.Security;
+/*package famu.edu.campusquest.Security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.firebase.auth.FirebaseAuth;
@@ -109,4 +109,4 @@ public abstract class FirebaseAuthenticationConfig extends WebSecurityConfigurer
     public FirebaseAuthenticationProvider authenticationProvider() {
         return new FirebaseAuthenticationProvider(firebaseAuth);
     }
-}
+}*/

@@ -58,6 +58,49 @@ public class EventService {
         return getEvent(event);
     }*/
 
+    private Event getEvent(DocumentSnapshot doc) throws ExecutionException, InterruptedException {
+
+        College collegeName = null;
+
+        ApiFuture<DocumentSnapshot> collegeQuery = doc.getReference().collection("College").document(doc.getString("collegeName")).get();
+        DocumentSnapshot collegeDoc = collegeQuery.get();
+        if (collegeDoc.exists()) {
+            collegeName = collegeDoc.toObject(College.class);
+        }
+
+        return new Event(doc.getId(), doc.getString("eventName"), doc.getString("eventAddress"), doc.getTimestamp("eventDate"), collegeName);
+
+    }
+
+    public ArrayList<Event> getEvents() throws ExecutionException, InterruptedException {
+
+
+        Query query = db.collection("Event");
+        ApiFuture<QuerySnapshot> future = query.get();
+        List<QueryDocumentSnapshot> documents = future.get().getDocuments();
+
+        ArrayList<Event> events = (documents.size() > 0) ?  new ArrayList<>() : null;
+
+        for(QueryDocumentSnapshot doc : documents)
+        {
+
+            events.add(getEvent(doc));
+        }
+
+        return events;
+    }
+
+    public Event getEventById(String eventId) throws ExecutionException, InterruptedException {
+        Event event = null;
+        DocumentReference eventDoc = db.collection("Event").document(eventId);
+        ApiFuture<DocumentSnapshot> future = eventDoc.get();
+        DocumentSnapshot doc = future.get();
+        if(doc.exists())
+            event = getEvent(doc);
+
+        return event;
+    }
+
     public String createEvent(RestEvent event) throws ExecutionException, InterruptedException {
         String eventId = null;
 

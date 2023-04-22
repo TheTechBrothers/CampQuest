@@ -1,4 +1,4 @@
-package famu.edu.campusquest.Services;
+/*package famu.edu.campusquest.Services;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
@@ -32,4 +32,4 @@ public class FirebaseUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User not found");
         }
     }
-}
+}*/

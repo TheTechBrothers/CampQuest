@@ -1,4 +1,4 @@
-package famu.edu.campusquest.Security;
+/*package famu.edu.campusquest.Security;
 
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,4 +24,4 @@ public class FirebaseAuthenticationToken extends AbstractAuthenticationToken {
     public Object getPrincipal() {
         return principal;
     }
-}
+}*/

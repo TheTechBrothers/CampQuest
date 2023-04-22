@@ -60,6 +60,35 @@ public class EventController {
         return response.getResponse();
     }*/
 
+    @GetMapping("/")
+    public ResponseEntity<Map<String, Object>> getAllEvents(){
+        try {
+            payload = eventService.getEvents();
+            statusCode = 200;
+            name = "events";
+
+        } catch (ExecutionException | InterruptedException e) {
+            payload = new ErrorMessage("Cannot fetch events from database", CLASS_NAME, e.toString());
+        }
+        response = new ResponseWrapper(statusCode, name, payload);
+
+        return response.getResponse();
+
+    }
+    @GetMapping("/{eventId}")
+    public ResponseEntity<Map<String, Object>> getEventById(@PathVariable(name="eventId") String id){
+        try{
+            payload = eventService.getEventById(id);
+            statusCode = 200;
+            name = "event";
+        } catch (ExecutionException | InterruptedException e) {
+            payload = new ErrorMessage("Cannot fetch event with id " + id + " from database.", CLASS_NAME, e.toString());
+        }
+        response = new ResponseWrapper(statusCode, name, payload);
+
+        return response.getResponse();
+    }
+
     @PostMapping("/")
     public ResponseEntity<Map<String,Object>> createEvent(@RequestBody RestEvent event){
         try{

@@ -1,4 +1,4 @@
-package famu.edu.campusquest.Security;
+/*package famu.edu.campusquest.Security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import famu.edu.campusquest.Util.ErrorMessage;
@@ -39,4 +39,4 @@ public class FirebaseAuthenticationFailureHandler implements AuthenticationFailu
         }
     }
 
-}
+}*/
