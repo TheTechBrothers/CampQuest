@@ -18,60 +18,14 @@ import java.util.concurrent.ExecutionException;
 public class EventService {
     private final Firestore db = FirestoreClient.getFirestore();
 
-    /*public Event getEvent(DocumentSnapshot doc) throws ExecutionException, InterruptedException {
-        College collegeName = null;
-
-        ApiFuture<DocumentSnapshot> collegeQuery = doc.getReference().collection("College").document(doc.getString("collegeName")).get();
-        DocumentSnapshot collegeDoc = collegeQuery.get();
-        if (collegeDoc.exists()) {
-            collegeName = collegeDoc.toObject(College.class);
-        }
-
-        return new Event(doc.getId(), doc.getString("eventName"), doc.getString("eventAddress"), doc.getTimestamp("eventDate"), collegeName);
-    }
-
-    public ArrayList<Event> getEvents() throws ExecutionException, InterruptedException {
-
-        Query query = db.collection("Event")
-                .orderBy("title", Query.Direction.ASCENDING);
-
-        ApiFuture<QuerySnapshot> future = query.get();
-        List<QueryDocumentSnapshot> documents =
-                future.get().getDocuments();
-
-        ArrayList<Event> events = (documents.size() > 0) ?
-                new ArrayList<>() : null;
-
-        for (QueryDocumentSnapshot doc : documents)
-            events.add(getEvent(doc));
-
-        return events;
-    }
-
-    public Event getEventById(String id) throws ExecutionException, InterruptedException {
-        DocumentSnapshot event = null;
-
-        DocumentReference doc = db.collection("Event").document(id);
-        ApiFuture<DocumentSnapshot> future = doc.get();
-        event = future.get();
-
-        return getEvent(event);
-    }*/
-
     private Event getEvent(DocumentSnapshot doc) throws ExecutionException, InterruptedException {
+        College collegeId = null;
 
-        String collegeNameStr = doc.getString("collegeName");
-        College collegeName = null;
+        ApiFuture<DocumentSnapshot> collegeQuery = ((DocumentReference) doc.get("collegeId")).get();
+        DocumentSnapshot collegeDoc = collegeQuery.get();
+        collegeId = collegeDoc.toObject(College.class);
 
-        if (collegeNameStr != null && !collegeNameStr.isEmpty()) {
-            ApiFuture<DocumentSnapshot> collegeQuery = doc.getReference().collection("College").document(collegeNameStr).get();
-            DocumentSnapshot collegeDoc = collegeQuery.get();
-            if (collegeDoc.exists()) {
-                collegeName = collegeDoc.toObject(College.class);
-            }
-        }
-
-        return new Event(doc.getId(), doc.getString("eventName"), doc.getString("eventAddress"), doc.getTimestamp("eventDate"), collegeName);
+        return new Event(doc.getId(), doc.getString("eventName"), doc.getString("eventAddress"), doc.getTimestamp("eventDate"), collegeId);
 
     }
 

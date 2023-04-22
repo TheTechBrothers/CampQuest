@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -28,37 +27,6 @@ public class EventController {
         this.eventService = eventService;
         payload = null;
     }
-
-    /*@GetMapping("/")
-    public ResponseEntity<Map<String,Object>> getEvents(){
-        Map<String,Object> returnVal = new HashMap<>();
-        int statusCode = 500;
-
-        try {
-            Object payload = eventService.getEvents();
-            statusCode = 200;
-            returnVal.put("events", payload);
-        }
-        catch (ExecutionException | InterruptedException e) {
-            returnVal.put("error", e.getStackTrace());
-        }
-        return ResponseEntity.status(statusCode).body(returnVal);
-    }
-
-    @GetMapping("/{eventId}")
-    public ResponseEntity<Map<String,Object>> getEvent(@PathVariable(name = "eventId") String id){
-        try {
-            payload = eventService.getEventById(id);
-            statusCode = 200;
-            name = "event";
-        } catch (ExecutionException | InterruptedException e) {
-            payload = new ErrorMessage("Cannot fetch event with id" + id + " from database", CLASS_NAME,
-                    e.getStackTrace().toString());
-        }
-
-        response = new ResponseWrapper(statusCode, name, payload);
-        return response.getResponse();
-    }*/
 
     @GetMapping("/")
     public ResponseEntity<Map<String, Object>> getAllEvents(){
