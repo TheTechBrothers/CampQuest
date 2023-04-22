@@ -1,47 +1,41 @@
-import {useContext, useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef} from "react";
 import {useNavigate} from "react-router-dom";
-import App from "../App.js"
+import {AuthContext} from "../AuthContext";
+
 
 function LoginIn() {
-    let AuthContext;
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
-    const {errors, setErrors} = useState([]);
+
     let navigate = useNavigate();
 
-    context.setErrors = (param, b) => {
+    useEffect(()=>{
+        window.document.body.classList.add("text-center");
 
-    };
+    },[])
 
-    async function handleSubmit(event) {
+    async function handleSubmit(event){
 
         event.preventDefault();
 
-        await context.login(emailRef.current.value, passwordRef.current.value).then(() => {
-            if (context.isLoggedIn && context.currentUser != null) {
+        await context.login(emailRef.current.value, passwordRef.current.value).then(()=>{
+            if(context.isLoggedIn && context.currentUser != null)
+            {
                 navigate("/");
+                this.headers = {
+                    "X-Auth-Token": localStorage.getItem("authorize")
+                }
             }
         })
 
     }
-
-    useEffect(() => {
-
-        if (Object.keys(context.currentUser).length = 0) {
-            context.setErrors(null, false);
-            navigate("/AboutUs");
-        } else {
-            setErrors(context.errors);
-        }
-    }, [context.currentUser])
-
     return (
         <>
             <h2>Login In To Your Account</h2>
             <br/>
             <div className="login">
-                <form id="login" method="GET">
+                <form id="login" onSubmit={handleSubmit}>
                     <a href="#">Create Account</a>
                     <br/>
                     <br/>
@@ -68,7 +62,7 @@ function LoginIn() {
                     <br/>
                     <br/>
                     <a href="#">Forgot Password?</a>
-                </form>
+                </form >
             </div>
             <br/>
         </>
