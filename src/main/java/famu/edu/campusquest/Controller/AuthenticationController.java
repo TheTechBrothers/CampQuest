@@ -1,34 +1,34 @@
 package famu.edu.campusquest.Controller;
 
+
+
 import com.google.api.client.util.Value;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.UserRecord;
 import famu.edu.campusquest.Model.User;
-import famu.edu.campusquest.Security.FirebaseUserDetails;
 import famu.edu.campusquest.Services.UserService;
+
 import famu.edu.campusquest.Util.*;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import famu.edu.campusquest.Security.FirebaseUserDetails;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.ExecutionException;
 
-@SuppressWarnings("ALL")
 @RestController
 @RequestMapping("/api")
 public class AuthenticationController {
 
-    private final FirebaseAuth firebaseAuth;
+    private final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     private final AuthenticationManager authenticationManager;
 
     @Value("${response.status}")
@@ -39,10 +39,11 @@ public class AuthenticationController {
     private ResponseWrapper response;
     private static final String CLASS_NAME = "Authentication";
 
+
     private final Log logger = LogFactory.getLog(this.getClass());
 
-    public AuthenticationController(FirebaseAuth firebaseAuth, AuthenticationManager authenticationManager) {
-        this.firebaseAuth = firebaseAuth;
+    public AuthenticationController(AuthenticationManager authenticationManager) {
+
         this.authenticationManager = authenticationManager;
     }
 
@@ -52,12 +53,7 @@ public class AuthenticationController {
                 .setEmail(registrationRequest.getEmail())
                 .setPassword(registrationRequest.getPassword())
                 .setDisplayName(registrationRequest.getDisplayName());
-        UserRecord userRecord = null;
-        try {
-            userRecord = firebaseAuth.createUser(createRequest);
-        } catch (FirebaseAuthException e) {
-            throw new RuntimeException(e);
-        }
+        UserRecord userRecord = firebaseAuth.createUser(createRequest);
         return "User created with UID: " + userRecord.getUid();
     }
 
@@ -86,7 +82,7 @@ public class AuthenticationController {
             Instant expiryDate = now.plus(1, ChronoUnit.HOURS);
             headers.add("Expires", String.valueOf(expiryDate.toEpochMilli()));
 
-        } catch (ExecutionException | InterruptedException e) {
+        } catch (InterruptedException | ExecutionException e) {
 
             payload = new ErrorMessage("Error signing in", CLASS_NAME, e.toString());
         }
