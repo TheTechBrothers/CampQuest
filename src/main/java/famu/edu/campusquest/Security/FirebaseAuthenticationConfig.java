@@ -3,8 +3,8 @@ package famu.edu.campusquest.Security;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.firebase.auth.FirebaseAuth;
 import famu.edu.campusquest.Services.FirebaseUserDetailsService;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -26,9 +28,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-@SuppressWarnings("SpringConfigurationProxyMethods")
+
 @Configuration
-public abstract class FirebaseAuthenticationConfig extends WebSecurityConfigurerAdapter {
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
+public class FirebaseAuthenticationConfig extends WebSecurityConfigurerAdapter {
 
     private final FirebaseAuth firebaseAuth;
 
@@ -58,7 +62,8 @@ public abstract class FirebaseAuthenticationConfig extends WebSecurityConfigurer
             errorObject.put("message", "Unauthorized access of protected resource, invalid credentials");
             errorObject.put("error", HttpStatus.UNAUTHORIZED);
             errorObject.put("code", errorCode);
-            errorObject.put("timestamp", new Timestamp(new Date().getTime()));
+            errorObject.put("timestamp",
+                    new Timestamp(new Date().getTime()));
             httpServletResponse.setContentType("application/json;charset=UTF-8");
             httpServletResponse.setStatus(errorCode);
             httpServletResponse.getWriter().write(objectMapper.writeValueAsString(errorObject));
@@ -88,7 +93,7 @@ public abstract class FirebaseAuthenticationConfig extends WebSecurityConfigurer
                 .requestMatchers(restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll().and()//.anyRequest().authenticated().and()
                 .addFilterBefore(new FirebaseAuthenticationFilter(authenticationManagerBean(),new FirebaseAuthenticationFailureHandler()), UsernamePasswordAuthenticationFilter.class)
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
     @Override
