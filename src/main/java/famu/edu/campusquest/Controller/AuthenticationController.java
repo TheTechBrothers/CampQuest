@@ -10,6 +10,7 @@ import famu.edu.campusquest.Services.UserService;
 import famu.edu.campusquest.Util.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -41,6 +42,7 @@ public class AuthenticationController {
 
     private final Log logger = LogFactory.getLog(this.getClass());
 
+    @Autowired
     public AuthenticationController(FirebaseAuth firebaseAuth, AuthenticationManager authenticationManager) {
         this.firebaseAuth = firebaseAuth;
         this.authenticationManager = authenticationManager;
