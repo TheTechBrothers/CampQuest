@@ -3,8 +3,8 @@ package famu.edu.campusquest.Security;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.firebase.auth.FirebaseAuth;
 import famu.edu.campusquest.Services.FirebaseUserDetailsService;
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,19 +15,19 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 
 @Configuration
 @EnableWebSecurity
@@ -62,8 +62,7 @@ public class FirebaseAuthenticationConfig extends WebSecurityConfigurerAdapter {
             errorObject.put("message", "Unauthorized access of protected resource, invalid credentials");
             errorObject.put("error", HttpStatus.UNAUTHORIZED);
             errorObject.put("code", errorCode);
-            errorObject.put("timestamp",
-                    new Timestamp(new Date().getTime()));
+            errorObject.put("timestamp", new Timestamp(new Date().getTime()));
             httpServletResponse.setContentType("application/json;charset=UTF-8");
             httpServletResponse.setStatus(errorCode);
             httpServletResponse.getWriter().write(objectMapper.writeValueAsString(errorObject));
@@ -80,7 +79,7 @@ public class FirebaseAuthenticationConfig extends WebSecurityConfigurerAdapter {
         configuration.setExposedHeaders(restSecProps.getExposedHeaders());
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
-        return (CorsConfigurationSource) source;
+        return source;
     }
 
 
@@ -90,8 +89,8 @@ public class FirebaseAuthenticationConfig extends WebSecurityConfigurerAdapter {
         http.cors().configurationSource(corsConfigurationSource()).and().csrf().disable().formLogin().disable()
                 .httpBasic().disable().exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint())
                 .and().authorizeRequests()
-                .requestMatchers(restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
-                .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll().and()//.anyRequest().authenticated().and()
+                .antMatchers(restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll().anyRequest().authenticated().and()
                 .addFilterBefore(new FirebaseAuthenticationFilter(authenticationManagerBean(),new FirebaseAuthenticationFailureHandler()), UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
