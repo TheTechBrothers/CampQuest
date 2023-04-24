@@ -18,8 +18,8 @@ function App() {
         <AuthProvider>
         <Navbar />
       <Routes>
-        <Route path="/Sign" element={<Sign />} />
-        <Route path="/Login" element={<Login/>} />
+          <Route path="/Sign" element={<Sign />} />
+          <Route path="/Login" element={<Login/>} />
         <Route path="/Search"  element={<Search/>} />
         <Route path="/api/event" element={<Event/>} />
         <Route path="/Contact"  element={<Contact/>} />
