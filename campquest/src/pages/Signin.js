@@ -1,66 +1,62 @@
-import React, {useState} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import "./Signin.css";
 import {useNavigate} from "react-router-dom";
-import axios from "axios";
+import {AuthContext} from "../AuthContext";
 
 
 function Sign (){
 
-    const [FullName, setFullName] = useState('')
-    const [SchoolName, setSchoolName] = useState('')
-    const [Email, setEmail] = useState('')
-    const [Password, setPassword] = useState('')
+    const context = useContext(AuthContext);
+    const emailRef = useRef("");
+    const passwordRef = useRef("");
 
-    function  enter () {
-    }
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const navigate = useNavigate();
+    let navigate = useNavigate();
 
-        function handclick(event){
-            //this will navigate to the events page when the user puts the information in
-            navigate('/target-route');
+    useEffect(() => {
+        window.document.body.classList.add("text-center");
 
+    }, [])
+
+    async function handleSubmit(event) {
+
+        event.preventDefault();
+
+        await context.login(emailRef.current.value, passwordRef.current.value).then(() => {
+            if (context.isLoggedIn && context.currentUser != null) {
+                navigate("/");
             }
+        })
 
-    const handleSumbit = async (e) => {
-        e.preventDefault()
 
-        console.log(FullName, SchoolName, Email, Password)
-        }
+    }
+
 
     return (
-        <div>
+        <main className="form-signin w-25 m-auto">
             <center><h1>CampQuest</h1></center>
-            <center>
-                <div className="signin">
-                    <form id="signin" onSubmit={handleSumbit}>
-                        <b /><p><b>Already have an account?</b> <a href="#"> Login Here</a>
-                        <br /><br />
-                        <label><b>Full Name</b></label>
-                        <input type="text" name="Uname" id="Uname" placeholder="Personal Name" onChange={(e) => setFullName(e.target.value)} value={FullName} />
-                        <br /><br />
-                        <label><b>School Name</b></label>
-                        <input type="text" name="School" id="School" placeholder="School Name" onChange={(e) => setSchoolName(e.target.value)} value={SchoolName} />
-                        <br /><br />
-                        <label><b>Email Address
-                        </b>
-                        </label>
-                        <input type="text" name="Uname" id="Uname" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} value={Email} />
-                        <br /><br />
-                        <label><b>Password
-                        </b>
-                        </label>
-                        <input type="Password" name="Pass" id="Pass" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={Password} />
-                        <br /><br />
-                        <input type="checkbox" id="check" name="check" defaultValue="check" /><br />
-                        <b /></p><p><b>By signing up, you agree to our terms and regulations</b></p>
-                        <center><input type="button" name="sign" id="sign" defaultValue="Sign In" onSubmit={handclick}/></center>
-                    </form>
+            <form onSubmit={handleSubmit}>
+                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+
+                <div className="form-floating">
+                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"
+                           ref={emailRef}/>
+                    <label htmlFor="floatingInput">Email address</label>
                 </div>
-            </center>
-            <br /><br />
-        </div>
-    )
+                <div className="form-floating">
+                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password"
+                           ref={passwordRef}/>
+                    <label htmlFor="floatingPassword">Password</label>
+                </div>
+                <div className="form-floating">
+                    <input type="checkbox" id="check" name="check" defaultValue="check" /><br />
+                    <p>By signing up, you agree to our terms and regulations</p>
+                </div>
+                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <p className="mt-5 mb-3 text-body-secondary"> &copy; 2017–2023</p>
+            </form>
+        </main>
+    );
+
 }
 
 export default Sign;

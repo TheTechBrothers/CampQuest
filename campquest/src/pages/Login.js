@@ -31,43 +31,31 @@ function LoginIn() {
 
     }
     return (
-        <>
+        <main className="form-signin w-25 m-auto">
+            <a href="#">Create Account</a>
             <h2>Login In To Your Account</h2>
-            <br/>
-            <div className="login">
-                <form id="login" onSubmit={handleSubmit}>
-                    <a href="#">Create Account</a>
-                    <br/>
-                    <br/>
-                    <label>
-                        <b>Email Address</b>
-                    </label>
-                    <label htmlFor="Uname"/>
-                    <input type="text" name="Uname" id="Uname" placeholder="Email Address"/>
-                    <br/>
-                    <br/>
-                    <label>
-                        <b>Password</b>
-                    </label>
-                    <label htmlFor="Pass"/>
-                    <input type="Password" name="Pass" id="Pass" placeholder="Password"/>
-                    <br/>
-                    <br/>
-                    <input type="button" name="log" id="log" defaultValue="Log In"/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <a href="#">Continue As A Guest</a>
-                    <br/>
-                    <br/>
-                    <a href="#">Forgot Password?</a>
-                </form >
-            </div>
-            <br/>
-        </>
+            <form onSubmit={handleSubmit}>
+                <h1 className="h3 mb-3 fw-normal">Please Login in</h1>
+                <div className="form-floating">
+                    <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"
+                           ref={emailRef}/>
+                    <label htmlFor="floatingInput">Email address</label>
+                </div>
+                <div className="form-floating">
+                    <input type="password" className="form-control" id="floatingPassword" placeholder="Password"
+                           ref={passwordRef}/>
+                    <label htmlFor="floatingPassword">Password</label>
+                </div>
+                <a href="#">Continue As A Guest</a>
+                <br/>
+                <br/>
+                <a href="#">Forgot Password?</a>
+                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Login in</button>
+                <p className="mt-5 mb-3 text-body-secondary"> &copy; 2017–2023</p>
+            </form>
+        </main>
+    );
 
-    )
 }
 export default LoginIn;
 
