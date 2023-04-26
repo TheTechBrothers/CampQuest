@@ -5,7 +5,7 @@ import {AuthContext} from "../AuthContext";
 
 
 
-function Sign (){
+function Sign () {
     const setErrors = useRef("");
     const context = useContext(AuthContext);
     const emailRef = useRef("");
