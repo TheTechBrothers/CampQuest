@@ -1,9 +1,8 @@
-import React, {Component, useEffect, useRef} from "react";
+import React, {Component} from "react";
 import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import axios from "axios";
-import {initializeApp} from "firebase/app";
+
 
 
 const AuthContext = React.createContext({

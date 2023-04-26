@@ -12,19 +12,6 @@ function LoginIn() {
 
     let navigate = useNavigate();
 
-    useEffect(()=>{
-        window.document.body.classList.add("text-center");
-
-        if(Object.keys(context.currentUser).length !== 0)
-        {
-            context.setErrors(null, false)
-            navigate("/Home")
-        }
-        else{
-            setErrors(context.errors);
-        }
-    },[context, context.currentUser, navigate])
-
     async function handleSubmit(event){
 
         event.preventDefault();
@@ -40,6 +27,20 @@ function LoginIn() {
         })
 
     }
+
+    useEffect(()=>{
+        window.document.body.classList.add("text-center");
+
+        if(Object.keys(context.currentUser).length !== 0)
+        {
+            context.setErrors(null, false)
+            navigate("/Home")
+        }
+        else{
+            setErrors(context.errors);
+        }
+    },[context, context.currentUser, navigate])
+
     return (
         <main className="form-signin w-25 m-auto">
             <a href="#">Create Account</a>

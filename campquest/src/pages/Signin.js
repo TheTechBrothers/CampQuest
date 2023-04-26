@@ -13,11 +13,6 @@ function Sign () {
 
     let navigate = useNavigate();
 
-    useEffect(() => {
-        window.document.body.classList.add("text-center");
-
-    }, [])
-
     async function handleSubmit(event) {
 
         event.preventDefault();
@@ -29,15 +24,20 @@ function Sign () {
         }
         let x = context.sign(emailRef.current.user, passwordRef.current.user);
         console.log(context.currentUser)
-            if( x !=null){
-                navigate("/")
-            }
-            else {
-                setErrors(context.errors);
-                console.log("Error")
-            }
-            console.log("Mounted")
-}
+        if( x !=null){
+            navigate("/")
+        }
+        else {
+            setErrors(context.errors);
+            console.log("Error")
+        }
+        console.log("Mounted")
+    }
+
+    useEffect(() => {
+        window.document.body.classList.add("text-center");
+
+    }, [])
 
     return (
         <main className="form-signin w-25 m-auto">
