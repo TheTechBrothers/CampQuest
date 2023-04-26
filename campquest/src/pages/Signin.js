@@ -1,11 +1,12 @@
 import React, {useContext, useEffect, useRef} from "react";
 import "./Signin.css";
-import {useNavigate} from "react-router-dom";
+import {useNavigate,} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
 
 
-function Sign (){
 
+function Sign (){
+    const setErrors = useRef("");
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
@@ -21,15 +22,22 @@ function Sign (){
 
         event.preventDefault();
 
-        await context.login(emailRef.current.value, passwordRef.current.value).then(() => {
-            if (context.isLoggedIn && context.currentUser != null) {
-                navigate("/");
+        if(!context || typeof context.Sign !== "function") {
+            console.error("Invalid context or sign up")
+            return;
+            console.log("Step1")
+        }
+        let x = context.sign(emailRef.current.user, passwordRef.current.user);
+        console.log(context.currentUser)
+            if( x !=null){
+                navigate("/")
             }
-        })
-
-
-    }
-
+            else {
+                setErrors(context.errors);
+                console.log("Error")
+            }
+            console.log("Mounted")
+}
 
     return (
         <main className="form-signin w-25 m-auto">

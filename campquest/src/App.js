@@ -10,6 +10,7 @@ import Footer from "./fragements/Footer";
 import Navbar from "./fragements/NavBar";
 import {AuthProvider} from "./AuthContext";
 import Sign from "./pages/Signin";
+import PrivateRoute from "./PrivateRoute";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <AuthProvider>
         <Navbar />
       <Routes>
-          <Route path="/Sign" element={<Sign />} />
+          <Route path="/Sign" element={<PrivateRoute><Sign /></PrivateRoute>} />
           <Route path="/Login" element={<Login/>} />
         <Route path="/Search"  element={<Search/>} />
         <Route path="/api/event" element={<Event/>} />

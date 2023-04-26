@@ -3,7 +3,9 @@ import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
 
 
+
 function LoginIn() {
+    const setErrors = useRef("");
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
@@ -13,13 +15,21 @@ function LoginIn() {
     useEffect(()=>{
         window.document.body.classList.add("text-center");
 
-    },[])
+        if(Object.keys(context.currentUser).length !== 0)
+        {
+            context.setErrors(null, false)
+            navigate("/Home")
+        }
+        else{
+            setErrors(context.errors);
+        }
+    },[context, context.currentUser, navigate])
 
     async function handleSubmit(event){
 
         event.preventDefault();
 
-        await context.login(emailRef.current.value, passwordRef.current.value).then(()=>{
+        await context.LoginIn(emailRef.current.value, passwordRef.current.value).then(()=>{
             if(context.isLoggedIn && context.currentUser != null)
             {
                 navigate("/");

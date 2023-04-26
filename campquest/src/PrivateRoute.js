@@ -3,12 +3,25 @@ import {AuthContext} from "./AuthContext";
 import {Navigate} from "react-router-dom";
 
 function PrivateRoute({children}) {
-    const {currentUser, isLoggedIn} = useContext(AuthContext);
+   const {currentUser} = useContext(AuthContext);
 
-    if (isLoggedIn && currentUser?.length > 0)
-        localStorage.setItem("user", JSON.stringify(currentUser));
+   if(currentUser != undefined){
+       console.log(currentUser.isActive);
+       alert("User is not active or paused");
 
-    return <Navigate to="/sigin" replace={true} />
+       //currentUser.signOut();
+
+       return <Navigate to= "/" replace={true}/>
+
+   }
+   else {
+       if (currentUser !=null & Object.keys(currentUser).length > 0) {
+           //console.log(currentUser)
+           localStorage.setItem("user", JSON.stringify(currentUser));
+
+       }
+       return currentUser ? children : <Navigate to="/" replace={true}/>
+   }
 }
 
 
