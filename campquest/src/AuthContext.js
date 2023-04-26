@@ -10,7 +10,7 @@ const AuthContext = React.createContext({
     setCurrentUser: ()=>{},
     isLoggedIn: false,
     LoginIn: () =>{},
-    Sign : () =>{},
+    SignUp : () =>{},
     signOut : () => {},
     setErrors: () => {}
 });
@@ -88,7 +88,7 @@ export class AuthProvider extends Component {
             // }).catch(err => console.log(err));
         },
 
-        Sign: async (email, password) =>{
+        SignUp: async (email, password) =>{
             const firebaseConfig = {
                 apiKey: "AIzaSyB2bHLq_5ateDHJTJyAkXuh5d5DIOYwSq0",
                 authDomain: "campquest-58c8a.firebaseapp.com",
@@ -159,10 +159,10 @@ export class AuthProvider extends Component {
 render() {
 
     const {children} = this.props
-    const {currentUser, errors, refresh, setErrors, setCurrentUser, signOut, Sign, LoginIn} = this.state
+    const {currentUser, errors, refresh, setErrors, setCurrentUser, signOut, SignUp, LoginIn} = this.state
 
     return (
-        <AuthContext.Provider value={{currentUser, errors, refresh, setErrors, setCurrentUser, signOut, Sign, LoginIn}}>
+        <AuthContext.Provider value={{currentUser, errors, refresh, setErrors, setCurrentUser, signOut, SignUp, LoginIn}}>
             {children}
         </AuthContext.Provider>
     );

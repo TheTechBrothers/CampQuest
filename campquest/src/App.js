@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./fragements/Footer";
 import Navbar from "./fragements/NavBar";
 import {AuthProvider} from "./AuthContext";
-import Sign from "./pages/Signin";
+import SignUp from "./pages/SignUp"
 import PrivateRoute from "./PrivateRoute";
 import Login from "./pages/Login";
 
@@ -19,7 +19,7 @@ function App() {
         <AuthProvider>
         <Navbar />
       <Routes>
-          <Route path="/Sign" element={<PrivateRoute><Sign /></PrivateRoute>} />
+          <Route path="/Sign" element={<PrivateRoute><SignUp /></PrivateRoute>} />
           <Route path="/LoginIn" element={<Login/>} />
         <Route path="/Search"  element={<Search/>} />
         <Route path="/api/event" element={<Event/>} />

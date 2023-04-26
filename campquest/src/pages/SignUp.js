@@ -5,7 +5,7 @@ import {AuthContext} from "../AuthContext";
 
 
 
-function Sign () {
+function SignUp () {
 
     const context = useContext(AuthContext);
     const emailRef = useRef("");
@@ -68,4 +68,4 @@ function Sign () {
 
 }
 
-export default Sign;
+export default SignUp;
