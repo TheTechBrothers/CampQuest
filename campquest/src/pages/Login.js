@@ -1,14 +1,15 @@
-import {useContext, useEffect, useRef} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
 
 
 
 function LoginIn() {
-    const setErrors = useRef("");
+
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
+    const [errors, setErrors] = useState("");
 
     let navigate = useNavigate();
 

@@ -1,15 +1,16 @@
-import React, {useContext, useEffect, useRef} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import "./Signin.css";
-import {useNavigate,} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
 
 
 
 function Sign () {
-    const setErrors = useRef("");
+
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
+    const [errors, setErrors] = useState("");
 
     let navigate = useNavigate();
 
@@ -22,7 +23,7 @@ function Sign () {
             return;
             console.log("Step1")
         }
-        let x = context.sign(emailRef.current.user, passwordRef.current.user);
+        let x = context.Sign(emailRef.current.user, passwordRef.current.user);
         console.log(context.currentUser)
         if( x !=null){
             navigate("/")
