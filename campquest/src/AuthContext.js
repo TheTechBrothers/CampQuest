@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import {initializeApp} from "firebase/app"
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
+import axios from "axios";
 
 const AuthContext = React.createContext({
     currentUser: {},
@@ -34,7 +36,7 @@ const AuthProvider = ({ children }) => {
         };
 
         //Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+       initializeApp(firebaseConfig);
 
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
@@ -72,20 +74,21 @@ const AuthProvider = ({ children }) => {
         clearInterval(refresh);
     }
 
-    const SignUp = async (email, password) => {
+    const SignUp = async (email, password, firstName, lastName, university) => {
+
         const firebaseConfig = {
-            apiKey: "...",
-            authDomain: "...",
-            databaseURL: "...",
-            projectId: "...",
-            storageBucket: "...",
-            messagingSenderId: "...",
-            appId: "...",
-            measurementId: "..."
+            apiKey: "AIzaSyB2bHLq_5ateDHJTJyAkXuh5d5DIOYwSq0",
+            authDomain: "campquest-58c8a.firebaseapp.com",
+            databaseURL: "https://campquest-58c8a-default-rtdb.firebaseio.com",
+            projectId: "campquest-58c8a",
+            storageBucket: "campquest-58c8a.appspot.com",
+            messagingSenderId: "556299306138",
+            appId: "1:556299306138:web:fc08db805d7b26e7d78b23",
+            measurementId: "G-DQ9CN3X2S5"
         };
 
         //Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+        initializeApp(firebaseConfig);
 
         const auth = getAuth();
 
@@ -103,27 +106,41 @@ const AuthProvider = ({ children }) => {
                 let token = res.token;
                 localStorage.setItem("FireBaseResponse", JSON.stringify(res));
 
-                const db = firebase.firestore();
-                const userCollection = db.collection('User')
-                const userId = user.uid
+                //axios call
 
-                await userCollection.doc(userId).set({
-                    isAdmin: false,
-                    uid: userId,
-                    city: "",
-                    createdAt: "",
-                    email: email,
-                    FirstName: "",
-                    LastLogin: "",
-                    LastName: "",
-                    UniversityName: "",
+                let data = JSON.stringify({
+                    "email": email,
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "universityName": university,
+                    "uid": user.uid
                 });
+
+                let config = {
+                    method: 'get',
+                    maxBodyLength: Infinity,
+                    url: 'http://localhost:8080/api/user/',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    data : data
+                };
+
+                axios.request(config)
+                    .then((response) => {
+                        console.log(JSON.stringify(response.data));
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    });
+
+
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorCode);
-                alert(errorMessage);
+                //alert(errorCode);
+                //alert(errorMessage);
             });
     }
 

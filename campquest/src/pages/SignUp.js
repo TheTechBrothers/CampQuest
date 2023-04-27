@@ -12,6 +12,9 @@ function SignUp () {
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
+    const firstnameRef = useRef("");
+    const lastnameRef = useRef("");
+    const universitynameRef = useRef("");
     const [errors, setErrors] = useState("");
 
     let navigate = useNavigate();
@@ -31,7 +34,9 @@ function SignUp () {
             return;
             console.log("Step1")
         }
-        let x = context.SignUp(emailRef.current.user, passwordRef.current.user);
+        let x = context.SignUp(emailRef.current.value, passwordRef.current.value,
+                                firstnameRef.current.value, lastnameRef.current.value,
+                                universitynameRef.current.value);
         console.log(context.currentUser)
         if( x !=null){
             navigate("/Search")
@@ -54,6 +59,24 @@ function SignUp () {
                 <br></br>
                 <img className="mb-4"  alt="" width="324"/>
                 <h1 className="h3 mb-3 fw-normal">Camp Quest</h1>
+                <br></br>
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="floatingInput" placeholder="First Name"
+                           ref={firstnameRef}/>
+                    <label htmlFor="floatingInput">First Name</label>
+                </div>
+                <br></br>
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="floatingInput" placeholder="Last Name"
+                           ref={lastnameRef}/>
+                    <label htmlFor="floatingInput">Last Name</label>
+                </div>
+                <br></br>
+                <div className="form-floating">
+                    <input type="text" className="form-control" id="floatingInput" placeholder="University"
+                           ref={universitynameRef}/>
+                    <label htmlFor="floatingInput">University</label>
+                </div>
                 <br></br>
                 <div className="form-floating">
                     <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"
