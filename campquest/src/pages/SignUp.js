@@ -1,7 +1,8 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
-import "./SignUp.css";
+
+
 
 
 
@@ -32,7 +33,7 @@ function SignUp () {
         let x = context.Sign(emailRef.current.user, passwordRef.current.user);
         console.log(context.currentUser)
         if( x !=null){
-            navigate("/")
+            navigate("/Search")
         }
         else {
             setErrors(context.errors);
@@ -44,28 +45,33 @@ function SignUp () {
 
     return (
         <main className="form-signin w-25 m-auto">
-            <center><h1>CampQuest</h1></center>
-            <form onSubmit={handleSubmit}>
-                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+            <form>
+                <img className="mb-4"  alt="" width="324"/>
+                <h1 className="h3 mb-3 fw-normal">Camp Quest</h1>
+
+                <h3 className="h3 mb-3 fw-normal">Sign Up</h3>
 
                 <div className="form-floating">
                     <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"
                            ref={emailRef}/>
                     <label htmlFor="floatingInput">Email address</label>
                 </div>
+                <br></br>
                 <div className="form-floating">
                     <input type="password" className="form-control" id="floatingPassword" placeholder="Password"
                            ref={passwordRef}/>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
-                <div className="form-floating">
-                    <input type="checkbox" id="check" name="check" defaultValue="check" /><br />
-                    <p>By signing up, you agree to our terms and regulations</p>
+                <br></br>
+                <div className="mb-3 form-check">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                        <label className="form-check-label" htmlFor="exampleCheck1">By signing up, you agree to our terms and regulations</label>
                 </div>
-                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
-                <p className="mt-5 mb-3 text-body-secondary"> &copy; 2017–2023</p>
+
+                <a className="nav-link" href="/Search"><button onSubmit={handleSubmit} className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button></a>
             </form>
         </main>
+
     );
 
 }
