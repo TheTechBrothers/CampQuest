@@ -66,9 +66,12 @@ function LoginIn () {
                            ref={passwordRef}/>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
+
                 <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Login</button>
-                <a href="/Search">Continue As A Guest</a>
+
                 <br></br>
+                <br></br>
+                <a href="/Search">Continue As A Guest</a>
                 <br></br>
                 <a href="#">Forgot Password?</a>
             </form>
