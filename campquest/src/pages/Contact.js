@@ -3,7 +3,7 @@ import "./Contact.css";
 
 function Contact () {
     return (
-        <>
+        <div>
             <center>
                 <h1>Contact Us</h1>
                 <p />
@@ -59,7 +59,7 @@ function Contact () {
                     <input type="submit" defaultValue="Submit" />
                 </form>
             </div>
-        </>
+        </div>
 
     )
 }

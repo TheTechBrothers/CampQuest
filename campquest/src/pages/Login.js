@@ -24,7 +24,7 @@ function LoginIn () {
         else{
             setErrors(context.errors);
         }
-    },[context, context.currentUser, navigate])
+    },[context, context.currentUser, navigate, setErrors])
 
     async function handleSubmit(event){
 

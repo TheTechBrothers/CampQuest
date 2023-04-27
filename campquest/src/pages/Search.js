@@ -2,7 +2,7 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import "./Search.css";
 
-export default function  search () {
+function  search () {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
 
@@ -36,3 +36,4 @@ export default function  search () {
 
 }
 
+export default search;

@@ -2,7 +2,7 @@ import React from "react";
 import "./Event.css";
 function Event  () {
     return (
-        <>
+        <div>
             <section id="about">
                 <div className="row">
                     <div className="col-sm-12 col-md-6">
@@ -84,7 +84,7 @@ function Event  () {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 

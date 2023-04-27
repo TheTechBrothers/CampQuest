@@ -22,12 +22,12 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="/SignUp">
+                        <a className="nav-link" href="/Sign">
                             SignUp
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/Login">
+                        <a className="nav-link" href="/LoginIn">
                             Login
                         </a>
                     </li>
@@ -37,7 +37,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/Event">
+                        <a className="nav-link" href="/api/event">
                             Event
                         </a>
                     </li>
@@ -47,7 +47,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/AboutUs">
+                        <a className="nav-link" href="/About Us">
                             AboutUs
                         </a>
                     </li>
