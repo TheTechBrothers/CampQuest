@@ -4,6 +4,7 @@ import App from './App';
 import 'bootstrap/dist/js/bootstrap.min'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'mdb-ui-kit/css/mdb.min.css'
+import "./pages/Campquest.css";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
