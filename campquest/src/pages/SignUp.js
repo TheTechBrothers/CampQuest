@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
+import background from "./Background.jpg";
 
 
 
@@ -44,7 +45,7 @@ function SignUp () {
 
 
     return (
-        <main className="form-signin w-25 m-auto">
+        <main className="form-signin w-25 m-auto" >
             <form>
                 <img className="mb-4"  alt="" width="324"/>
                 <h1 className="h3 mb-3 fw-normal">Camp Quest</h1>
