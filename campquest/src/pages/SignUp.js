@@ -26,12 +26,12 @@ function SignUp () {
 
         event.preventDefault();
 
-        if(!context || typeof context.Sign !== "function") {
+        if(!context || typeof context.SignUp !== "function") {
             console.error("Invalid context or sign up")
             return;
             console.log("Step1")
         }
-        let x = context.Sign(emailRef.current.user, passwordRef.current.user);
+        let x = context.SignUp(emailRef.current.user, passwordRef.current.user);
         console.log(context.currentUser)
         if( x !=null){
             navigate("/Search")
@@ -45,8 +45,10 @@ function SignUp () {
 
 
     return (
-        <main className="form-signin w-25 m-auto" >
-            <form>
+
+        <main className="form-signin w-25 m-auto">
+            <form onSubmit={handleSubmit}>
+
                 <img className="mb-4"  alt="" width="324"/>
                 <h1 className="h3 mb-3 fw-normal">Camp Quest</h1>
 
@@ -69,7 +71,7 @@ function SignUp () {
                         <label className="form-check-label" htmlFor="exampleCheck1">By signing up, you agree to our terms and regulations</label>
                 </div>
 
-                <a className="nav-link" href="/Search"><button onSubmit={handleSubmit} className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button></a>
+                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
             </form>
         </main>
 
