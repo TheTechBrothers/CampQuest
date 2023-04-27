@@ -46,14 +46,15 @@ function SignUp () {
 
     return (
 
-        <main className="form-signin w-25 m-auto">
+        <main className="form-signin w-50 h-50 m-auto">
             <form onSubmit={handleSubmit}>
-
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <img className="mb-4"  alt="" width="324"/>
                 <h1 className="h3 mb-3 fw-normal">Camp Quest</h1>
-
-                <h3 className="h3 mb-3 fw-normal">Sign Up</h3>
-
+                <br></br>
                 <div className="form-floating">
                     <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"
                            ref={emailRef}/>
@@ -73,6 +74,10 @@ function SignUp () {
 
                 <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
             </form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </main>
 
     );

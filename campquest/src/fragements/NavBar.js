@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light btn-secondary">
+        <nav className="navbar navbar-expand-lg navbar-light bg-secondary justify-content-between" >
             <a className="navbar-brand" href="/AboutUs">
                 CampQuest
             </a>
@@ -53,6 +53,11 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
+
+                <form className="form-inline w-25" >
+                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                </form>
+
         </nav>
     )
 };

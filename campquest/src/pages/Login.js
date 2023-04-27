@@ -46,15 +46,16 @@ function LoginIn () {
     }
 
     return (
-        <main className="form-signin w-25 m-auto">
+
+        <main className="form-signin w-50 h-50 m-auto">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <form onSubmit={handleSubmit}>
                 <img className="mb-4"  alt="" width="324"/>
                 <h1 className="h3 mb-3 fw-normal">Login In To Your Account</h1>
                 <br></br>
-
-                <h3 className="h3 mb-3 fw-normal">Please Login in</h3>
-                <br></br>
-
                 <div className="form-floating">
                     <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"
                            ref={emailRef}/>
@@ -74,6 +75,10 @@ function LoginIn () {
                 <a href="/Search">Continue As A Guest</a>
                 <br></br>
                 <a href="#">Forgot Password?</a>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
             </form>
         </main>
     );
