@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 
 function AboutUs () {
     return (
-        <div className="row"><div className="story" className="col">
+        <div className="row text-center"><div className="story" className="col">
             <center>
                 <h2>Our Story</h2>
             </center>
@@ -39,37 +39,34 @@ function AboutUs () {
                     host.
                 </p>
             </b>
-            <section className="row">
-                <section className="column">
-                    <img src={Dinner} alt="Dinner" />
-                </section>
-                <section className="column">
-                    <img src={Concert} alt="Enjoying" />
-                </section>
-            </section>
+            <div className="row">
+                <div className="col-md-6">
+                    <img src={Dinner} alt="Dinner" className="img-fluid" />
+                </div>
+                <div className="col-md-6">
+                    <img src={Concert} alt="Enjoying" className="img-fluid" />
+                </div>
+            </div>
         </div>
             <br />
             <br />
             <center>
-                <h2>Our Purpose</h2>
+                <h2 style={{marginTop: '25px'}}>Our Purpose</h2>
             </center>
-            <b>
                 <p>
-                    Mission To help and improve college students social experience
+                    Mission: To help and improve college students social experience
                     by locating different local college events.
                 </p>
-            </b>
-            <p />
-            <b>
-                Mission The vision of CampQuest is to be one of the most trustworthy
-                site where we can enhance all college students social experience in college
-            </b>
+                <p>
+                Vision: Make CampQuest to be one of the most trustworthy
+                    site where we can enhance all college students social experience in college.
+                </p>
             <center>
-                <video width={400} height={300} controls="">
+                <video controls width="400" height="300">
                     <source src={video} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <p>
+                <p style={{marginTop: '40px'}}>
                     DISCLAIMER: I hereby declare that I do not own the rights to this
                     music/song. All rights belong to the owner. No Copyright Infringement
                     Intended.
