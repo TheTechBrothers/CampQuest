@@ -117,9 +117,9 @@ const AuthProvider = ({ children }) => {
                 });
 
                 let config = {
-                    method: 'get',
+                    method: 'post',
                     maxBodyLength: Infinity,
-                    url: 'http://localhost:8080/api/user/',
+                    url: 'http://localhost:8080/api/register/',
                     headers: {
                         'Content-Type': 'application/json'
                     },

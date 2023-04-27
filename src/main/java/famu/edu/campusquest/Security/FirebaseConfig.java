@@ -14,10 +14,10 @@ import java.io.IOException;
 
 @Configuration
 public class FirebaseConfig {
+
     @Bean
     public FirebaseAuth firebaseAuth() throws IOException {
         //This line may be different based on what your project is named. Use the appropriate class name appears above
-        //TODO: Replace your application name
         ClassLoader loader = CampusQuestApplication.class.getClassLoader();
 
         //opens the file stored in resources

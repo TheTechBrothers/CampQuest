@@ -48,13 +48,19 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public String register(@RequestBody RegistrationRequest registrationRequest) throws FirebaseAuthException {
-        UserRecord.CreateRequest createRequest = new UserRecord.CreateRequest()
-                .setEmail(registrationRequest.getEmail())
-                .setPassword(registrationRequest.getPassword())
-                .setDisplayName(registrationRequest.getDisplayName());
-        UserRecord userRecord = firebaseAuth.createUser(createRequest);
-        return "User created with UID: " + userRecord.getUid();
+    public ResponseEntity register(@RequestBody User user) throws FirebaseAuthException {
+        final UserService userService = new UserService();
+        try{
+            payload = userService.createUser(user);
+            statusCode = 201;
+            name = "userId";
+        } catch (ExecutionException | InterruptedException e) {
+            payload = new ErrorMessage("Cannot create new user in database.", CLASS_NAME, e.toString());
+        }
+
+        response = new ResponseWrapper(statusCode,name, payload);
+
+        return response.getResponse();
     }
 
     @PostMapping("/login")

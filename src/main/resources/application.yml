@@ -38,14 +38,12 @@ security:
   allowed-public-apis:
     - /favicon.ico
     - /
-    - /login
-    - /register
+    - /api/login
+    - /api/register
     - /logout
     - /css/**
     - /js/**
-    - /api/event
-      /
-      /{eventId}
+    - /api/event/{eventId}
   exposed-headers:
     - X-Xsrf-Token
     - X-Auth-Token

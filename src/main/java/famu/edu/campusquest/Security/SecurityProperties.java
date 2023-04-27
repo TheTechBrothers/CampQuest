@@ -10,10 +10,12 @@ import java.util.List;
 @ConfigurationProperties("security")
 @Data
 public class SecurityProperties {
+
     boolean allowCredentials;
     List<String> allowedOrigins;
     List<String> allowedHeaders;
     List<String> exposedHeaders;
     List<String> allowedMethods;
     List<String> allowedPublicApis;
+
 }
