@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 
 function AboutUs () {
     return (
-        <div><div className="story">
+        <div className="row"><div className="story" className="col">
             <center>
                 <h2>Our Story</h2>
             </center>
