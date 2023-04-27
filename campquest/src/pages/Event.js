@@ -1,8 +1,6 @@
 import React from "react";
 import "./Event.css";
-
-
-const Event = () => {
+function Event  () {
     return (
         <>
             <section id="about">

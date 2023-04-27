@@ -1,9 +1,10 @@
 import React from "react";
 import "./NavBar.css";
+
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light btn-secondary">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/AboutUs">
                 CampQuest
             </a>
             <button
@@ -21,32 +22,32 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">
-                            SigIn
+                        <a className="nav-link" href="/SignUp">
+                            SignUp
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <a className="nav-link" href="/Login">
                             Login
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <a className="nav-link" href="/Search">
                             Search
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <a className="nav-link" href="/Event">
                             Event
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <a className="nav-link" href="/Contact">
                             Contact Us
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
+                        <a className="nav-link" href="/AboutUs">
                             AboutUs
                         </a>
                     </li>

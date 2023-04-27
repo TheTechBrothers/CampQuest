@@ -1,17 +1,30 @@
 import {useContext, useEffect, useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
+import "./Login.css";
 
-
-
-function LoginIn() {
+function LoginIn () {
 
     const context = useContext(AuthContext);
     const emailRef = useRef("");
     const passwordRef = useRef("");
-    const [errors, setErrors] = useState("");
+    const [setErrors] = useState("");
 
     let navigate = useNavigate();
+
+
+    useEffect(()=>{
+        window.document.body.classList.add("text-center");
+
+        if(Object.keys(context.currentUser).length !== 0)
+        {
+            context.setErrors(null, false)
+            navigate("/Home")
+        }
+        else{
+            setErrors(context.errors);
+        }
+    },[context, context.currentUser, navigate])
 
     async function handleSubmit(event){
 
@@ -29,22 +42,9 @@ function LoginIn() {
 
     }
 
-    useEffect(()=>{
-        window.document.body.classList.add("text-center");
-
-        if(Object.keys(context.currentUser).length !== 0)
-        {
-            context.setErrors(null, false)
-            navigate("/Home")
-        }
-        else{
-            setErrors(context.errors);
-        }
-    },[context, context.currentUser, navigate])
-
     return (
         <main className="form-signin w-25 m-auto">
-            <a href="#">Create Account</a>
+            <a href="/SignUp">Create Account</a>
             <h2>Login In To Your Account</h2>
             <form onSubmit={handleSubmit}>
                 <h1 className="h3 mb-3 fw-normal">Please Login in</h1>
@@ -58,7 +58,7 @@ function LoginIn() {
                            ref={passwordRef}/>
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
-                <a href="#">Continue As A Guest</a>
+                <a href="/Search">Continue As A Guest</a>
                 <br/>
                 <br/>
                 <a href="#">Forgot Password?</a>

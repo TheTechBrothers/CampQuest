@@ -1,9 +1,9 @@
 
 import React from "react";
-import "./AboutUs.css"
-import App from "../App.js"
+import "./AboutUs.css";
 
-const AboutUs = () => {
+
+function AboutUs () {
     return (
         <>
             <div className="story">

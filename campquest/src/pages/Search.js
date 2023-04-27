@@ -1,6 +1,6 @@
 import React from "react";
-import "./Search.css";
 import {useNavigate} from "react-router-dom";
+import "./Search.css";
 
 export default function  search () {
     // eslint-disable-next-line react-hooks/rules-of-hooks

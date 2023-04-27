@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
-import "./Signin.css";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../AuthContext";
+import "./SignUp.css";
 
 
 
@@ -13,6 +13,12 @@ function SignUp () {
     const [errors, setErrors] = useState("");
 
     let navigate = useNavigate();
+
+
+    useEffect(() => {
+        window.document.body.classList.add("text-center");
+
+    }, [])
 
     async function handleSubmit(event) {
 
@@ -35,10 +41,6 @@ function SignUp () {
         console.log("Mounted")
     }
 
-    useEffect(() => {
-        window.document.body.classList.add("text-center");
-
-    }, [])
 
     return (
         <main className="form-signin w-25 m-auto">
@@ -60,7 +62,7 @@ function SignUp () {
                     <input type="checkbox" id="check" name="check" defaultValue="check" /><br />
                     <p>By signing up, you agree to our terms and regulations</p>
                 </div>
-                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
                 <p className="mt-5 mb-3 text-body-secondary"> &copy; 2017–2023</p>
             </form>
         </main>
