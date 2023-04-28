@@ -1,49 +1,32 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
-//import "./Search.css";
-import 'bootstrap/dist/js/bootstrap.min'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'mdb-ui-kit/css/mdb.min.css'
-import '@fortawesome/fontawesome-free/css/all.min.css'
+import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdb-ui-kit/css/mdb.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-function  search () {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+function Search() {
     const navigate = useNavigate();
 
-    function handclick(){
-        //this will navigate to the events page when the user puts the information in
+    function handleClick() {
         navigate('/api/event');
-
     }
 
     return (
-        <main className="form-signin w-75  m-auto ">
-            <form className="form-inline my-2 my-lg-0" >
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <img className="mb-4"  alt="" width="324"/>
-                <h1 className="h3 mb-3 fw-normal">Event Search</h1>
-                <div className="row row-cols-lg-auto g-3 align-items-center " >
-                    <div className="col-12">
-                        <div className="form-floating w-90">
-                            <input type="text" className="form-control" id="floatingInput" placeholder="Search"
-                                   />
-                            <label htmlFor="floatingInput">Search</label>
+        <div>
+            <h1 className="h3 mb-3 fw-normal text-center" style={{ color: "white" }}>Welcome to CampQuest!</h1>
+            <h1 className="h3 mb-3 fw-normal text-center" style={{ color: "white" }}>Event Search</h1>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-md-8">
+                        <div className="input-group">
+                            <input type="text" className="form-control" placeholder="Search" />
+                            <button className="btn btn-primary" onClick={handleClick}>Search</button>
                         </div>
                     </div>
-                    <div className="col-12">
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onSubmit={handclick}>Search</button>
-                    </div>
                 </div>
-            </form>
-            <br></br>
-            <br></br>
-        </main>
-
-    )
-
+            </div>
+        </div>
+    );
 }
 
-export default search;
+export default Search;

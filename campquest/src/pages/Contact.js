@@ -29,27 +29,27 @@ function Contact () {
             <form>
                 <img className="mb-4"  alt="" width="324"/>
                 <div className="form-floating">
-                    <input type="FirstName" className="form-control" id="floatingInput" placeholder="FirstName"
+                    <input type="FirstName" className="form-control" id="floatingInput" placeholder="First Name"
                            />
-                    <label htmlFor="FirstName">FirstName</label>
+                    <label htmlFor="FirstName">First Name</label>
                 </div>
                 <br></br>
                 <div className="form-floating">
-                    <input type="LastName" className="form-control" id="floatingPassword" placeholder="LastName"
+                    <input type="LastName" className="form-control" id="floatingPassword" placeholder="Last Name"
                            />
-                    <label htmlFor="LastName">LastName</label>
+                    <label htmlFor="LastName">Last Name</label>
                 </div>
                 <br></br>
                 <div className="form-floating">
-                    <input type="PhoneNumber" className="form-control" id="floatingPassword" placeholder="PhoneNumber"
+                    <input type="PhoneNumber" className="form-control" id="floatingPassword" placeholder="Phone Number"
                     />
-                    <label htmlFor="PhoneNumber">PhoneNumber</label>
+                    <label htmlFor="PhoneNumber">Phone Number</label>
                 </div>
                 <br></br>
                 <div className="form-floating">
-                    <input type="PhoneNumber" className="form-control" id="floatingPassword" placeholder="PhoneNumber"
+                    <input type="PhoneNumber" className="form-control" id="floatingPassword" placeholder="Phone Number"
                     />
-                    <label htmlFor="PhoneNumber">Subject Topic</label>
+                    <label htmlFor="PhoneNumber">Subject</label>
                 </div>
                 <br></br>
                 <div className="form-floating">

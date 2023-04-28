@@ -42,8 +42,8 @@ function Event  () {
                         <br />
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.8953155088616!2d-84.3056216!3d30.439069399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ecf51adb351167%3A0x331138374f830e1!2s403%20Stadium%20Dr%2C%20Tallahassee%2C%20FL%2032304!5e0!3m2!1sen!2sus!4v1679207521926!5m2!1sen!2sus"
-                            width={400}
-                            height={300}
+                            width={300}
+                            height={200}
                             style={{ border: 0 }}
                             allowFullScreen=""
                             loading="lazy"
@@ -80,10 +80,11 @@ function Event  () {
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#">TECHFORLIFE</a>
                         <br />
+                        <br />
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4024.4652248237135!2d-85.14696906920912!3d41.074135548626295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8815e4f303d7c91f%3A0xf218811af639c01!2sGrand%20Wayne%20Convention%20Center!5e0!3m2!1sen!2sus!4v1679211202221!5m2!1sen!2sus"
-                            width={400}
-                            height={300}
+                            width={300}
+                            height={200}
                             style={{ border: 0 }}
                             allowFullScreen=""
                             loading="lazy"

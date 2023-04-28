@@ -1,16 +1,11 @@
 import React from "react";
 
-function Footer(){
+function Footer() {
     return (
-        <footer className="bg-light text-center text-white mt-5"className="sticky-bottom">
-            <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-                &copy; 2023 Copyright &nbsp;
-                <a className="text-white" href="http://localhost:3000">CampQuest </a>
-            </div>
+        <footer className="py-3 my-4 border-top">
+            <p className="text-center">© 2023 CampQuest, Inc</p>
         </footer>
     )
 }
 
 export default Footer;
-
-

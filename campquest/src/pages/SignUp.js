@@ -58,7 +58,7 @@ function SignUp () {
                 <br></br>
                 <br></br>
                 <img className="mb-4"  alt="" width="324"/>
-                <h1 className="h3 mb-3 fw-normal">Camp Quest</h1>
+                <h1 className="h3 mb-3 fw-normal">CampQuest</h1>
                 <br></br>
                 <div className="form-floating">
                     <input type="text" className="form-control" id="floatingInput" placeholder="First Name"
@@ -92,7 +92,7 @@ function SignUp () {
                 <br></br>
                 <div className="mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                        <label className="form-check-label" htmlFor="exampleCheck1">By signing up, you agree to our terms and regulations</label>
+                        <label className="form-check-label text-white" htmlFor="exampleCheck1">By signing up, you agree to our terms and regulations</label>
                 </div>
 
                 <button className="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
